@@ -1,19 +1,18 @@
-/* ============== Variable Css ============== */
-
+/* ========== VARIABLE CSS ============= */
 :root {
   --header-height: 3rem;
 
-  /* ============== Colors ============== */
-  /* Decide Browser Theme */
-  --hue-color: 250; /* GREEN: 144, BLUE: 230, PURPLE: 250, PINK: 340 */
+  /* ============ COLORS ================ */
+  /* DECIDE YOUR BROWSER THEME */
+  --hue-color: 250; /* GREEN: 144,  Blue: 230, Purple: 250, Pink: 340 */
 
-  /* ====== HSL color mode ====== */
+  /* HSL Color Mode */
   --first-color: hsl(var(--hue-color), 69%, 58%);
   --first-color-second: hsl(var(--hue-color), 71%, 47%);
   --first-color-alt: hsl(var(--hue-color), 55%, 50%);
   --first-color-lighter: hsl(var(--hue-color), 90%, 82%);
 
-  --title-color: hsl(var(--hue-color), 10% 15%);
+  --title-color: hsl(var(--hue-color), 10%, 15%);
   --text-color: hsl(var(--hue-color), 10%, 40%);
   --mainText: hsl(var(--hue-color), 10%, 20%);
   --text-color-light: hsl(var(--hue-color), 10%, 65%);
@@ -29,15 +28,14 @@
     rgba(101, 125, 157, 1) 100%
   );
 
-  /* =============== Font and Typography ============== */
+  /*  ================ FONT AND TYPOGRAPHY ============== */
   --jetBrains-font: "JetBrains Mono", monospace;
   --major-font: "Major Mono Display", monospace;
   --gullible-font: "Maven Pro", sans-serif;
   --body-font: "Poppins", sans-serif;
   --roboto-font: "Roboto", sans-serif;
   --robotoMono-font: "Roboto Mono", monospace;
-
-  /* 1rem ~ 16px, .5rem = 8px  */
+  /* 1rem = 16px, .5rem = 8px */
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -46,32 +44,30 @@
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
 
-  /* Font Weight */
-
+  /* FONT WEIGHT */
   --font-medium: 500;
   --font-semi-bold: 600;
   --font-bold: 700;
 
-  /* Margin Size - Bottom */
+  /* Margin Size - BOTTOM */
+  /* .25rem = 4px, .5rem= 8px, 1rem= 16px, .75rem= 12px */
   --mb-0-25: 0.25rem;
   --mb-0-5: 0.5rem;
   --mb-0-75: 0.75rem;
   --mb-1: 1rem;
+  --mb-1-25: 1.25rem;
   --mb-1-5: 1.5rem;
-  --mb-1-75: 1.75rem;
   --mb-2: 2rem;
   --mb-2-5: 2.5rem;
   --mb-3: 3rem;
 
-  /* Z-Index */
+  /*  ======== Z-index ========= */
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
 }
-
-/* Font size for larger devices */
-
-@media (min-width: 968px) {
+/* FONT SIZE FOR LARGER DEVICES */
+@media screen and (min-width: 968px) {
   :root {
     --big-font-size: 3rem;
     --h1-font-size: 2.5rem;
@@ -86,18 +82,18 @@
 /* ============== Variable colors for dark theme ============== */
 
 body.dark-theme {
-  /* ====== HSL color mode ====== */
-  --first-color: hsl(var(--hue-color), 69%, 58%); /* No change */
+  /* HSL Color Mode */
+  --first-color: hsl(var(--hue-color), 69%, 58%); /* Not changed */
   --first-color-second: hsl(var(--hue-color), 30%, 8%);
-  --first-color-alt: hsl(var(--hue-color), 55%, 50%); /* No change */
-  --first-color-lighter: hsl(var(--hue-color), 90%, 82%); /* No change */
+  --first-color-alt: hsl(var(--hue-color), 55%, 50%); /* Not changed */
+  --first-color-lighter: hsl(var(--hue-color), 90%, 82%); /* Not changed */
 
-  --title-color: hsl(var(--hue-color), 10% 95%);
+  --title-color: hsl(var(--hue-color), 10%, 95%);
   --text-color: hsl(var(--hue-color), 10%, 75%);
   --mainText: hsl(var(--hue-color), 10%, 75%);
-  --text-color-light: hsl(var(--hue-color), 10%, 65%); /* No change */
+  --text-color-light: hsl(var(--hue-color), 10%, 65%); /* Not changed */
   --input-color: hsl(var(--hue-color), 29%, 16%);
-  --body-color: hsl(var(--hue-color), 30%, 15%);
+  --body-color: hsl(var(--hue-color), 30%, 14%);
   --container-color: hsl(var(--hue-color), 30%, 16%);
   --scroll-bar-color: hsl(var(--hue-color), 10%, 50%);
   --scroll-thumb-color: hsl(var(--hue-color), 15%, 32%);
