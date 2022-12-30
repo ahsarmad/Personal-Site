@@ -107,6 +107,7 @@ body.dark-theme {
   padding-left: var(--mb-0-5);
   margin: 0;
   margin-top: -5px;
+  gap: var(--mb-0-5);
 }
 
 .change-theme {
@@ -207,11 +208,13 @@ img {
 /* ====== Nav Styling ====== */
 
 .nav {
+  max-width: 968px;
   height: var(--header-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 0;
+  margin-left: var(--mb-0-5);
+  margin-right: var(--mb-0-25);
 }
 
 .nav_logo,
@@ -242,8 +245,8 @@ img {
   .nav_menu {
     position: fixed;
     bottom: -100%;
-    left: 0;
     right: 0;
+    left: 0;
     width: 100%;
     background-color: var(--body-color);
     padding: 2rem 1.5rem 4rem;
@@ -290,7 +293,7 @@ img {
 
 /* Show Menu */
 
-.show_menu {
+.show-menu {
   bottom: 0;
 }
 

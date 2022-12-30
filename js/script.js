@@ -38,3 +38,39 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
 console.log("Theme setting working properly");
+
+/* ======= Menu Shown/ Hidden ======= */
+
+const navMenu = document.getElementById("nav-menu");
+const navToggle = document.getElementById("nav-toggle");
+const navClose = document.getElementById("nav-close");
+
+// ======= Menu shown ======
+/* Validate if constant exists */
+
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.add("show-menu");
+  });
+}
+// ======= Menu Hidden ======
+/* Validate if constant exists */
+
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navMenu.classList.remove("show-menu");
+  });
+}
+
+// ======= Removing menu profile ======
+
+const navLink = document.querySelectorAll(".nav_link");
+
+function linkAction() {
+  const navMenu = document.getElementById("nav-menu");
+  // by clicking on nav_links, we remove shown menu
+  navMenu.classList.remove("show-menu");
+}
+
+navLink.forEach((n) => n.addEventListener("click", linkAction));
+console.log("remove menu profile is working");
