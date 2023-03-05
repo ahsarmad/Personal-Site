@@ -1,22 +1,18 @@
-/* ========= Variable Css ========= */
-
+/* ? ================== VARIABLE CSS ================== */
 :root {
   --header-height: 3rem;
 
-  /* ========= Colors ========= */
-  /* Decide Browser Theme */
-  --hue-color: 250;
+  /* ? ================== COLORS ================== */
+  /* DECIDE YOUR BROWSER THEME */
+  --hue-color: 250; /* GREEN: 144,  Blue: 230, Purple: 250, Pink: 340 */
 
-  --first-color: hsl(
-    var(--hue-color),
-    69%,
-    58%
-  ); /* GREEN: 144, BLUE: 230, PURPLE: 250, PINK: 340 */
+  /* HSL Color Mode */
+  --first-color: hsl(var(--hue-color), 69%, 58%);
   --first-color-second: hsl(var(--hue-color), 71%, 47%);
   --first-color-alt: hsl(var(--hue-color), 55%, 50%);
   --first-color-lighter: hsl(var(--hue-color), 90%, 82%);
 
-  --title-color: hsl(var(--hue-color), 10% 15%);
+  --title-color: hsl(var(--hue-color), 10%, 15%);
   --text-color: hsl(var(--hue-color), 10%, 40%);
   --mainText: hsl(var(--hue-color), 10%, 20%);
   --text-color-light: hsl(var(--hue-color), 10%, 65%);
@@ -32,15 +28,14 @@
     rgba(101, 125, 157, 1) 100%
   );
 
-  /* =============== Font and Typography ============== */
+  /*  ? ================== FONT AND TYPOGRAPHY ================== */
   --jetBrains-font: "JetBrains Mono", monospace;
   --major-font: "Major Mono Display", monospace;
   --gullible-font: "Maven Pro", sans-serif;
   --body-font: "Poppins", sans-serif;
   --roboto-font: "Roboto", sans-serif;
   --robotoMono-font: "Roboto Mono", monospace;
-
-  /* 1rem ~ 16px, .5rem = 8px  */
+  /* 1rem = 16px, .5rem = 8px */
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -49,32 +44,30 @@
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
 
-  /* Font Weight */
-
+  /* FONT WEIGHT */
   --font-medium: 500;
   --font-semi-bold: 600;
   --font-bold: 700;
 
-  /* Margin Size - Bottom */
+  /* Margin Size - BOTTOM */
+  /* .25rem = 4px, .5rem= 8px, 1rem= 16px, .75rem= 12px */
   --mb-0-25: 0.25rem;
   --mb-0-5: 0.5rem;
   --mb-0-75: 0.75rem;
   --mb-1: 1rem;
+  --mb-1-25: 1.25rem;
   --mb-1-5: 1.5rem;
-  --mb-1-75: 1.75rem;
   --mb-2: 2rem;
   --mb-2-5: 2.5rem;
   --mb-3: 3rem;
 
-  /* Z-Index */
+  /*  ? ================== Z-index ================== */
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
 }
-
-/* Font size for larger devices */
-
-@media (min-width: 968px) {
+/* FONT SIZE FOR LARGER DEVICES */
+@media screen and (min-width: 968px) {
   :root {
     --big-font-size: 3rem;
     --h1-font-size: 2.5rem;
@@ -84,4 +77,307 @@
     --small-font-size: 0.875rem;
     --smaller-font-size: 0.813rem;
   }
+}
+
+/* ? ================== Variable colors for dark theme ================== */
+
+body.dark-theme {
+  /* HSL Color Mode */
+  --first-color: hsl(var(--hue-color), 69%, 58%); /* Not changed */
+  --first-color-second: hsl(var(--hue-color), 30%, 8%);
+  --first-color-alt: hsl(var(--hue-color), 55%, 50%); /* Not changed */
+  --first-color-lighter: hsl(var(--hue-color), 90%, 82%); /* Not changed */
+
+  --title-color: hsl(var(--hue-color), 10%, 95%);
+  --text-color: hsl(var(--hue-color), 10%, 75%);
+  --mainText: hsl(var(--hue-color), 10%, 75%);
+  --text-color-light: hsl(var(--hue-color), 10%, 65%); /* Not changed */
+  --input-color: hsl(var(--hue-color), 29%, 16%);
+  --body-color: hsl(var(--hue-color), 30%, 14%);
+  --container-color: hsl(var(--hue-color), 30%, 16%);
+  --scroll-bar-color: hsl(var(--hue-color), 10%, 50%);
+  --scroll-thumb-color: hsl(var(--hue-color), 15%, 32%);
+}
+
+/* ? ================== Nav Buttons Dark/Light theme ================== */
+
+.nav_btns {
+  display: flex;
+  align-items: center;
+  padding-left: var(--mb-0-5);
+  margin: 0;
+  margin-top: -5px;
+  gap: var(--mb-0-5);
+}
+
+.change-theme {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  margin-right: var(--mb-1);
+  cursor: pointer;
+}
+
+.change-theme:hover {
+  color: var(--first-color);
+}
+
+/* ? ================== Base ================== */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 0 var(--header-height) 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ? ================== Reusable CSS classes ================== */
+
+.section {
+  padding: 2rem 0 4rem;
+  margin: auto;
+  min-height: 80vh;
+}
+
+.section_title {
+  font-size: var(-big-font-size);
+  font-family: var(--gullible-font);
+}
+
+.section_subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-3);
+}
+
+.section_title,
+.section_subtitle {
+  text-align: center;
+}
+
+/* ? ================== Layout ================== */
+
+.container {
+  margin-right: var(--mb-1);
+}
+
+.grid {
+  display: grid;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+}
+
+/* ? ================== Nav Styling ================== */
+
+.nav {
+  max-width: 968px;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: var(--mb-0-5);
+  margin-right: var(--mb-0-25);
+}
+
+.nav_logo,
+.nav_toggle {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+.nav_logo:hover {
+  color: var(--first-color);
+}
+
+.nav_toggle {
+  font-size: var(--h3-font-size);
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.nav_toggle:hover {
+  color: var(--first-color);
+}
+
+.navbar-brand {
+  font-family: var(--robotoMono-font);
+}
+
+@media screen and (max-width: 768px) {
+  .nav_menu {
+    position: fixed;
+    bottom: -100%;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--body-color);
+    padding: 2rem 1.5rem 4rem;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: 0.5s;
+  }
+}
+
+.nav_list {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.nav_link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+.nav_link:hover {
+  color: var(--first-color);
+}
+
+.nav_icon {
+  font-size: 1.2rem;
+}
+
+.nav_close {
+  position: absolute;
+  right: 1.3rem;
+  bottom: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--first-color);
+}
+
+.nav_close:hover {
+  color: var(--first-color-alt);
+}
+
+/* Show Menu */
+
+.show-menu {
+  bottom: 0;
+}
+
+/* Active Link */
+
+.active-link {
+  color: var(--first-color);
+}
+
+/* Change background header */
+.scroll-header {
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}
+
+/*? ================== Home ================== */
+
+.home {
+  height: 90vh;
+  align-content: space-between;
+}
+
+.home__container {
+  gap: 1rem;
+  padding-left: 0;
+  margin-left: var(--mb-1);
+  display: flex;
+}
+
+.home__content {
+  display: grid;
+  grid-template-columns: 0.08fr 1fr;
+  grid-template-areas: "home__social home__content";
+  padding-top: var(--mb-2-5);
+  align-items: center;
+  height: auto;
+  align-content: space-between;
+  margin-right: var(--mb-0-25);
+  margin-left: 0;
+}
+
+.home__social {
+  display: grid;
+  grid-area: home__social;
+  grid-template-columns: max-content;
+  row-gap: 1rem;
+  column-gap: 0;
+  padding-top: 2rem;
+  margin: 0;
+}
+
+.home__social-icon {
+  font-size: 1.25rem;
+  color: var(--first-color);
+}
+
+.home__social-icon:hover {
+  color: var(--first-color-alt);
+}
+
+.home__data {
+  grid-area: home__content;
+  align-content: center;
+  text-align: center;
+}
+
+.home__welcome {
+  text-align: center;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  padding: 1.5rem;
+}
+
+.home__title {
+  text-align: center;
+  font-size: var(--big-font-size);
+  color: var(--text-color);
+  margin-top: var(--mb-1-5);
+  padding-bottom: 1rem;
+}
+
+.Typewriter {
+  margin-top: var(--mb-1);
+  margin-bottom: var(--mb-2);
+  color: var(--mainText);
+  font-family: var(--robotoMono-font);
+  font-size: var(--h1-font-size);
 }
