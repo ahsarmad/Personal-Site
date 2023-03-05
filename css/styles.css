@@ -1,8 +1,8 @@
-/* ========== VARIABLE CSS ============= */
+/* ? ================== VARIABLE CSS ================== */
 :root {
   --header-height: 3rem;
 
-  /* ============ COLORS ================ */
+  /* ? ================== COLORS ================== */
   /* DECIDE YOUR BROWSER THEME */
   --hue-color: 250; /* GREEN: 144,  Blue: 230, Purple: 250, Pink: 340 */
 
@@ -28,7 +28,7 @@
     rgba(101, 125, 157, 1) 100%
   );
 
-  /*  ================ FONT AND TYPOGRAPHY ============== */
+  /*  ? ================== FONT AND TYPOGRAPHY ================== */
   --jetBrains-font: "JetBrains Mono", monospace;
   --major-font: "Major Mono Display", monospace;
   --gullible-font: "Maven Pro", sans-serif;
@@ -61,7 +61,7 @@
   --mb-2-5: 2.5rem;
   --mb-3: 3rem;
 
-  /*  ======== Z-index ========= */
+  /*  ? ================== Z-index ================== */
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
@@ -79,7 +79,7 @@
   }
 }
 
-/* ============== Variable colors for dark theme ============== */
+/* ? ================== Variable colors for dark theme ================== */
 
 body.dark-theme {
   /* HSL Color Mode */
@@ -99,7 +99,7 @@ body.dark-theme {
   --scroll-thumb-color: hsl(var(--hue-color), 15%, 32%);
 }
 
-/* ====== Nav Buttons Dark/Light theme ====== */
+/* ? ================== Nav Buttons Dark/Light theme ================== */
 
 .nav_btns {
   display: flex;
@@ -121,7 +121,7 @@ body.dark-theme {
   color: var(--first-color);
 }
 
-/* ====== Base ====== */
+/* ? ================== Base ================== */
 
 * {
   box-sizing: border-box;
@@ -161,7 +161,7 @@ img {
   height: auto;
 }
 
-/* ====== Reusable CSS classes ====== */
+/* ? ================== Reusable CSS classes ================== */
 
 .section {
   padding: 2rem 0 4rem;
@@ -185,7 +185,7 @@ img {
   text-align: center;
 }
 
-/* ====== Layout ====== */
+/* ? ================== Layout ================== */
 
 .container {
   margin-right: var(--mb-1);
@@ -205,7 +205,7 @@ img {
   background-color: var(--body-color);
 }
 
-/* ====== Nav Styling ====== */
+/* ? ================== Nav Styling ================== */
 
 .nav {
   max-width: 968px;
@@ -306,4 +306,78 @@ img {
 /* Change background header */
 .scroll-header {
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}
+
+/*? ================== Home ================== */
+
+.home {
+  height: 90vh;
+  align-content: space-between;
+}
+
+.home__container {
+  gap: 1rem;
+  padding-left: 0;
+  margin-left: var(--mb-1);
+  display: flex;
+}
+
+.home__content {
+  display: grid;
+  grid-template-columns: 0.08fr 1fr;
+  grid-template-areas: "home__social home__content";
+  padding-top: var(--mb-2-5);
+  align-items: center;
+  height: auto;
+  align-content: space-between;
+  margin-right: var(--mb-0-25);
+  margin-left: 0;
+}
+
+.home__social {
+  display: grid;
+  grid-area: home__social;
+  grid-template-columns: max-content;
+  row-gap: 1rem;
+  column-gap: 0;
+  padding-top: 2rem;
+  margin: 0;
+}
+
+.home__social-icon {
+  font-size: 1.25rem;
+  color: var(--first-color);
+}
+
+.home__social-icon:hover {
+  color: var(--first-color-alt);
+}
+
+.home__data {
+  grid-area: home__content;
+  align-content: center;
+  text-align: center;
+}
+
+.home__welcome {
+  text-align: center;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  padding: 1.5rem;
+}
+
+.home__title {
+  text-align: center;
+  font-size: var(--big-font-size);
+  color: var(--text-color);
+  margin-top: var(--mb-1-5);
+  padding-bottom: 1rem;
+}
+
+.Typewriter {
+  margin-top: var(--mb-1);
+  margin-bottom: var(--mb-2);
+  color: var(--mainText);
+  font-family: var(--robotoMono-font);
+  font-size: var(--h1-font-size);
 }

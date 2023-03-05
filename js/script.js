@@ -84,7 +84,7 @@ console.log("remove menu profile is working");
 //     "Scrum Practitioner",
 //     "Problem Solver",
 //     "Cloud Architect",
-//     "Critical Thinker",
+//     "Creative Thinker",
 //     "Self-Starter",
 //     "Passionate Learner",
 //     "Tech Enthusiast",
