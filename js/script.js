@@ -74,3 +74,44 @@ function linkAction() {
 
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 console.log("remove menu profile is working");
+
+// ======= Typewriter-effect ======
+
+// new Typewriter("#typewriter", {
+//   strings: [
+//     "Full-Stack Developer",
+//     "Mobile Application Engineer",
+//     "Scrum Practitioner",
+//     "Problem Solver",
+//     "Cloud Architect",
+//     "Critical Thinker",
+//     "Self-Starter",
+//     "Passionate Learner",
+//     "Tech Enthusiast",
+//     "Committed Team Player",
+//     "Versatile Developer",
+//   ],
+//   autoStart: true,
+//   loop: true,
+//   cursor: "|",
+// });
+new Typewriter("#typewriter", {
+  strings: [
+    "[ Full-Stack Developer",
+    "[ Mobile Application Engineer",
+    "[ Scrum Practitioner",
+    "[ Problem Solver",
+    "[ Cloud Architect",
+    "[ Critical Thinker",
+    "[ Self-Starter",
+    "[ Passionate Learner",
+    "[ Tech Enthusiast",
+    "[ Committed Team Player",
+    "[ Versatile Developer",
+  ],
+  autoStart: true,
+  loop: true,
+  cursor: " ]",
+});
+
+console.log("typewriter is working");
