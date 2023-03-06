@@ -109,6 +109,7 @@ body.dark-theme {
   margin: 0;
   margin-top: -5px;
   gap: var(--mb-0-5);
+  transition: ease-in-out 0.3s;
 }
 
 .change-theme {
@@ -163,6 +164,15 @@ img {
   height: auto;
 }
 
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
 /* ? ================== Reusable CSS classes ================== */
 
 .section {
@@ -194,7 +204,7 @@ img {
   position: relative;
   display: inline-block;
   background-color: var(--first-color);
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 1);
   padding: 1rem;
   border-radius: 0.8rem;
   font-weight: var(--font-medium);
@@ -209,6 +219,7 @@ img {
   transition: 0.7s;
   font-size: var(--h3-font-size);
   overflow: hidden;
+  z-index: 1;
 }
 .button:hover {
   background-color: #4559fa;
@@ -219,7 +230,7 @@ img {
 }
 
 .button span {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 1);
   position: absolute;
   left: 0.5rem;
   transition: 0.5s ease-in-out;
@@ -234,10 +245,10 @@ img {
 .button:after {
   content: "";
   position: absolute;
-  width: 4rem;
+  width: 3.5rem;
   height: 100%;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.4);
   transform: translateX(-18rem) skew(30deg);
   transition: 0.6s ease-in-out;
   top: 0;
@@ -284,6 +295,7 @@ img {
   color: var(--title-color);
   font-weight: var(--font-medium);
   transition: ease-in-out 0.3s;
+  z-index: 1;
 }
 
 .nav_logo:hover {
@@ -294,6 +306,7 @@ img {
   font-size: var(--h3-font-size);
   cursor: pointer;
   margin-right: 2rem;
+  z-index: 1;
 }
 
 .nav_toggle:hover {
@@ -333,6 +346,7 @@ img {
   color: var(--title-color);
   font-weight: var(--font-medium);
   transition: ease-in-out 0.3s;
+  z-index: 1;
 }
 
 .nav_link:hover {
@@ -352,6 +366,7 @@ img {
   cursor: pointer;
   color: var(--first-color);
   transition: ease-in-out 0.3s;
+  z-index: 1;
 }
 
 .nav_close:hover {
@@ -419,6 +434,7 @@ img {
   font-size: 1.25rem;
   color: var(--first-color);
   transition: ease-in-out 0.3s;
+  z-index: 1;
 }
 
 .home__social-icon:hover {

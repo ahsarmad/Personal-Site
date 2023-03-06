@@ -77,91 +77,49 @@ console.log("remove menu profile is working");
 
 // ======= Typewriter-effect ======
 
-// new Typewriter("#typewriter", {
-//   strings: [
-//     "Full-Stack Developer",
-//     "Mobile Application Engineer",
-//     "Scrum Practitioner",
-//     "Problem Solver",
-//     "Cloud Architect",
-//     "Creative Thinker",
-//     "Self-Starter",
-//     "Passionate Learner",
-//     "Tech Enthusiast",
-//     "Committed Team Player",
-//     "Versatile Developer",
-//   ],
-//   autoStart: true,
-//   loop: true,
-//   cursor: "|",
-// });
 new Typewriter("#typewriter", {
   strings: [
-    "[ Full-Stack Developer",
-    "[ Mobile Application Engineer",
-    "[ Scrum Practitioner",
-    "[ Problem Solver",
-    "[ Cloud Architect",
-    "[ Critical Thinker",
-    "[ Self-Starter",
-    "[ Passionate Learner",
-    "[ Tech Enthusiast",
-    "[ Committed Team Player",
-    "[ Versatile Developer",
+    "Full-Stack Developer",
+    "Mobile Application Engineer",
+    "Rock Climbing Enthusiast",
+    "Scrum Practitioner",
+    "Committed Team Player",
+    "Problem Solver",
+    "Classical Music Admirer",
+    "Cloud Architect",
+    "Critical Thinker",
+    "Passionate Learner",
+    "Lover of Nature",
+    "Tech Enthusiast",
+    "Versatile Developer",
+    "Hiker",
   ],
   autoStart: true,
   loop: true,
-  cursor: " ]",
+  cursor: "|",
 });
-
-const text = "Hi, I'm Sarmad and I'm a";
-const chars = text.split("");
-const $text = document.querySelector(".home__title");
-$text.innerHTML = chars.map((c, i) => `<span>${c}</span>`).join("");
-
-const duration = 1600;
-const delay = duration / chars.length;
-anime({
-  targets: $text.querySelectorAll("span"),
-  color: [
-    { value: "#191654" },
-    { value: "#43c6ac" },
-    { value: "#FFFFFF" },
-    { value: "#FFFFFF" },
-    { value: "#43c6ac" },
-  ],
-  duration: duration,
-  delay: anime.stagger(delay),
-  easing: "linear",
-  complete: function () {
-    // set color for second animation
-    anime.set($text.querySelectorAll("span"), {
-      color: "#43c6ac",
-    });
-    //* Second animation
-    anime({
-      targets: $text.querySelectorAll("span"),
-      color: [
-        { value: "#FFFFFF" },
-        // { value: "#FFD700" },
-        { value: "#D7BE69" },
-        { value: "#0D5BE1" },
-      ],
-      duration: 2000,
-      delay: anime.stagger(150),
-      loop: true,
-      easing: "linear",
-      direction: "alternate",
-      loopBegin: function (anim) {
-        anim.began = true;
-      },
-      complete: function (anim) {
-        if (anim.began) {
-          anim.reset();
-        }
-      },
-    });
-  },
-});
+// new Typewriter("#typewriter", {
+//   strings: [
+//     "[ Full-Stack Developer",
+//     "[ Mobile Application Engineer",
+//     "[ Rock Climbing Enthusiast",
+//     "[ Scrum Practitioner",
+//     "[ Committed Team Player",
+//     "[ Problem Solver",
+//     "[ Classical Music Admirer",
+//     "[ Cloud Architect",
+//     "[ Critical Thinker",
+//     "[ Passionate Learner",
+//     "[ Lover of Nature",
+//     "[ Tech Enthusiast",
+//     "[ Versatile Developer",
+//     "[ Hiker",
+//   ],
+//   autoStart: true,
+//   loop: true,
+//   cursor: " ]",
+// });
 
 console.log("typewriter is working");
+
+//
