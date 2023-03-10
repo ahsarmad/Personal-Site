@@ -22,10 +22,10 @@ const setupParticles = () => {
     particlesJS("particles-js", {
       particles: {
         number: {
-          value: 30,
+          value: 20,
           density: {
             enable: true,
-            value_area: 400,
+            value_area: 800,
           },
         },
         color: {
@@ -63,7 +63,7 @@ const setupParticles = () => {
         },
         line_linked: {
           enable: true,
-          distance: 150,
+          distance: 200,
           color: "#4559fa",
           opacity: 0.6,
           width: 1,
@@ -87,7 +87,7 @@ const setupParticles = () => {
         detect_on: "canvas",
         events: {
           onhover: {
-            enable: true,
+            enable: false,
             mode: "repulse",
           },
           onclick: {
@@ -131,7 +131,7 @@ const setupParticles = () => {
           value: 20,
           density: {
             enable: false,
-            value_area: 700,
+            value_area: 800,
           },
         },
         color: {
@@ -255,6 +255,11 @@ themeButton.addEventListener("click", () => {
   //Save theme and current icon that user has chosen
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
+
+  // re-cache canvas element
+  particlesCanvas = document.getElementById("particles-js-canvas-el");
+
+  // Set particle options based on theme
   setupParticles();
 });
 console.log("Theme setting working properly");
@@ -328,4 +333,25 @@ particles.style.backgroundColor = "rgba(0, 0, 0, 0)";
 particles.onclick = function (e) {
   e.preventDefault();
   e.stopPropagation();
+};
+
+// Blob
+
+const blob = document.getElementById("blob");
+const blobWidth = blob.offsetWidth;
+const blobHeight = blob.offsetHeight;
+
+document.body.onpointermove = (event) => {
+  const { clientX, clientY } = event;
+
+  blob.style.left = `${clientX - blobWidth / 2}px`;
+  blob.style.top = `${clientY - blobHeight / 2}px`;
+
+  blob.animate(
+    {
+      left: `${clientX}px`,
+      top: `${clientY}px`,
+    },
+    { duration: 3000, fill: "forwards" }
+  );
 };
