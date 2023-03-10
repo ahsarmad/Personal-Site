@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="1821.3333"
+   height="1821.3333"
+   viewBox="0 0 1821.3333 1821.3333"
+   sodipodi:docname="docker-seeklogo.com.ai"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath34">
+      <path
+         d="M 0,1366 H 1366 V 0 H 0 Z"
+         id="path32" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <g
+     id="g8"
+     inkscape:groupmode="layer"
+     inkscape:label="docker-seeklogo.com"
+     transform="matrix(1.3333333,0,0,-1.3333333,0,1821.3333)">
+    <path
+       d="M 729.715,1008.187 H 601.653 v 128.062 h 128.062 z"
+       style="fill:#009ddb;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="path10" />
+    <path
+       d="M 729.715,847.194 H 601.653 v 128.062 h 128.062 z"
+       style="fill:#009ddb;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="path12" />
+    <path
+       d="M 729.715,686.202 H 601.653 v 128.062 h 128.062 z"
+       style="fill:#009ddb;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="path14" />
+    <path
+       d="M 574.21,847.194 H 446.148 V 975.256 H 574.21 Z"
+       style="fill:#009ddb;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="path16" />
+    <path
+       d="M 574.21,686.202 H 446.148 V 814.264 H 574.21 Z"
+       style="fill:#009ddb;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="path18" />
+    <path
+       d="M 418.706,847.194 H 290.644 v 128.062 h 128.062 z"
+       style="fill:#009ddb;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="path20" />
+    <path
+       d="M 418.706,686.202 H 290.644 v 128.062 h 128.062 z"
+       style="fill:#009ddb;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="path22" />
+    <path
+       d="M 265.031,686.202 H 136.968 v 128.062 h 128.063 z"
+       style="fill:#009ddb;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="path24" />
+    <path
+       d="M 885.22,686.202 H 757.157 V 814.264 H 885.22 Z"
+       style="fill:#009ddb;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="path26" />
+    <g
+       id="g28">
+      <g
+         id="g30"
+         clip-path="url(#clipPath34)">
+        <g
+           id="g36"
+           transform="translate(483.3027,229.75)">
+          <path
+             d="m 0,0 c -471.653,0 -416.769,415.289 -416.769,415.289 h 787.426 c 132.795,0 176.702,42.077 176.702,42.077 0,0 -75.008,96.962 12.806,214.048 98.791,-56.714 95.133,-140.869 95.133,-140.869 0,0 100.62,32.93 162.822,-23.783 C 783.36,393.335 629.685,400.653 629.685,400.653 629.685,400.653 486.986,0 0,0"
+             style="fill:#009ddb;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path38" />
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
