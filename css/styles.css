@@ -32,6 +32,7 @@
   /*  ? ================== FONT AND TYPOGRAPHY ================== */
   --jetBrains-font: "JetBrains Mono", monospace;
   --major-font: "Major Mono Display", monospace;
+  --raleway-font: "Raleway", sans-serif;
   --quicksand-font: "Quicksand", sans-serif;
   --source-code-font: "Source Code Pro", monospace;
   --gullible-font: "Maven Pro", monospace;
@@ -226,6 +227,10 @@ img {
   font-size: var(--h3-font-size);
   overflow: hidden;
   z-index: 1;
+  /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -15px; */
+
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .button:hover {
   background-color: #4559fa;
@@ -233,6 +238,7 @@ img {
   padding-left: 0.8rem;
   padding-right: 2.5rem;
   color: rgba(255, 255, 255, 1);
+  transform: scale(1.08);
 }
 
 .button span {
@@ -578,17 +584,21 @@ img {
 .about__img {
   width: 20rem;
   border-radius: 2rem;
-  box-shadow: var(--image-color) 0px 25px 70px -35px,
-    var(--image-color) 0px 25px 70px -35px;
-  transition: ease-in-out 0.3s;
+  /* box-shadow: var(--image-color) 0px 35px 70px -35px,
+    var(--image-color) 0px 35px 70px -35px; */
+  box-shadow: 0 2.8px 10px 20px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  transition: ease-in-out 0.4s;
   z-index: 1;
 }
 
 .about__img:hover {
+  /* -webkit-box-shadow: 0px 5px 25px 0px var(--image-color);
+  -moz-box-shadow: 0px 5px 25px 0px var(--image-color);
+  box-shadow: 0px 5px 25px 0px var(--image-color); */
   transform: scale(1.1);
-  -webkit-box-shadow: 0px 5px 10px 3px var(--image-color);
-  -moz-box-shadow: 0px 5px 10px 3px var(--image-color);
-  box-shadow: 0px 5px 15px 3px var(--image-color);
 }
 
 .about__caption-text {
@@ -611,12 +621,12 @@ img {
   font-weight: 500;
   padding: 0.5rem 0rem;
   border-radius: 0.5rem;
-  box-shadow: 0px 5px 40px 0px var(--image-color);
+  box-shadow: 0px 0px 30px 0px var(--image-color);
 }
 
 .about__img-caption:hover .about__caption-text {
   bottom: -7rem;
-  opacity: 0.9;
+  opacity: 0.92;
 }
 
 .about__description {
@@ -666,6 +676,7 @@ img {
   margin-bottom: var(--mb-2);
   z-index: 1;
   transition: ease-in-out 0.3s;
+  backdrop-filter: blur(40px);
 }
 
 .skills__container-card:hover {
@@ -680,7 +691,7 @@ img {
   margin: auto;
   padding: 2em;
   text-shadow: 0 0 1em transparent(black, 0.5);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(40px);
   transform: perspective(500px);
   transform-style: preserve-3d;
   z-index: 1;
@@ -694,8 +705,9 @@ img {
   width: 100%;
   height: 100%;
   background: var(--first-color-lighter);
+  /* background: #efa00b; */
   clip-path: circle(100px at 80% 20%);
-  transition: 0.5s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 .card_skill:hover::before {
@@ -743,15 +755,15 @@ img {
   position: relative;
   object-fit: cover;
   text-align: center;
-  transform: translate(-3%, 92%);
-  transition: 1.5s;
+  transform: translate(-30%, 94%);
+  transition: 0.8s;
 }
 
 .card_skill .contentBx h2 {
   position: relative;
-  color: var(--first-color-alt);
+  color: #320d3e;
   font-family: var(--source-code-font);
-  font-weight: bold;
+  font-weight: 600;
   margin: 0;
   padding: 0;
 }
