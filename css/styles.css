@@ -17,6 +17,7 @@
   --mainText: hsl(var(--hue-color), 10%, 20%);
   --image-color: hsl(var(--hue-color), 10%, 20%);
   --text-color-light: hsl(var(--hue-color), 10%, 65%);
+  --caption-text-color: #000;
   --input-color: hsl(var(--hue-color), 70%, 88%);
   --body-color: hsl(var(--hue-color), 66%, 99%);
   --container-color: #fff;
@@ -100,6 +101,7 @@ body.dark-theme {
   --mainText: hsl(var(--hue-color), 10%, 75%);
   --image-color: hsl(var(--hue-color), 69%, 58%);
   --text-color-light: hsl(var(--hue-color), 10%, 65%); /* Not changed */
+  --caption-text-color: #fff;
   --input-color: hsl(var(--hue-color), 29%, 16%);
   --body-color: hsl(var(--hue-color), 30%, 14%);
   --container-color: hsl(var(--hue-color), 30%, 16%);
@@ -147,9 +149,9 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
+  /* background-color: hsl(var(--hue-color), 66%, 99%); */
   transition: background-color 0.3s ease-in-out;
 }
-
 h1,
 h2,
 h3,
@@ -492,7 +494,6 @@ img {
   display: flex;
   justify-content: center;
   margin-top: var(--mb-1);
-  animation: scrollDown 3s infinite;
 }
 
 .home__scroll-button {
@@ -501,20 +502,13 @@ img {
   z-index: 1;
 }
 .home__scroll-button:hover {
-  color: var(--first-color-alt);
+  color: #4559fa;
   transform: scale(1.1);
 }
 
 .home__scroll-mouse {
   font-size: var(--h1-font-size);
   margin-bottom: var(--mb-3);
-}
-
-.home__scroll-name {
-  font-size: var(--small-font-size);
-  color: var(--title-color);
-  font-weight: var(--font-medium);
-  margin: var(--mb-0-25);
 }
 
 .home__scroll-arrow {
@@ -553,7 +547,7 @@ img {
 }
 
 .about__caption-text {
-  color: var(--mainText);
+  color: var(--caption-text-color);
   position: absolute;
   bottom: 0px;
   left: 50%;
@@ -567,11 +561,12 @@ img {
   pointer-events: none;
   width: 112%;
   background-color: var(--body-color);
-  color: var(--mainText);
   font-weight: 500;
   padding: 0.5rem 0rem;
   border-radius: 0.5rem;
-  box-shadow: 0px 0px 30px 0px var(--image-color);
+  /* box-shadow: 0px 0px 20px 0px var(--image-color); */
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .about__img-caption:hover .about__caption-text {
@@ -720,7 +715,7 @@ img {
 /* ------ Blob ------ */
 
 #blob {
-  height: 300px;
+  height: 320px;
   aspect-ratio: 1;
   position: fixed;
   left: 50%;
@@ -728,5 +723,5 @@ img {
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background: linear-gradient(to right, aquamarine, mediumpurple);
-  filter: blur(175px);
+  filter: blur(200px);
 }
