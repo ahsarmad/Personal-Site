@@ -22,7 +22,7 @@ const setupParticles = () => {
     particlesJS("particles-js", {
       particles: {
         number: {
-          value: 20,
+          value: 35,
           density: {
             enable: true,
             value_area: 800,
@@ -87,7 +87,7 @@ const setupParticles = () => {
         detect_on: "canvas",
         events: {
           onhover: {
-            enable: false,
+            enable: true,
             mode: "repulse",
           },
           onclick: {
@@ -352,6 +352,6 @@ document.body.onpointermove = (event) => {
       left: `${clientX}px`,
       top: `${clientY}px`,
     },
-    { duration: 3000, fill: "forwards" }
+    { duration: 5000, fill: "forwards" }
   );
 };

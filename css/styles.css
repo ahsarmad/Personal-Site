@@ -221,14 +221,11 @@ img {
   letter-spacing: 0.15rem;
   border-top: 0.5px solid rgba(255, 255, 255, 0.35);
   border-left: 0.5px solid rgba(255, 255, 255, 0.35);
-  /* border: 2.5px solid rgba(255, 255, 255, 0.35); */
   padding-left: 2.5rem;
   transition: 0.7s;
   font-size: var(--h3-font-size);
   overflow: hidden;
   z-index: 1;
-  /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -15px; */
-
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
@@ -491,26 +488,6 @@ img {
   padding: 1rem 1.5rem 1rem 1.5rem;
 }
 
-/* Scroll Down */
-/* @keyframes scrollDown {
-  0% {
-    margin-top: 15px;
-    opacity: 0;
-  }
-  15% {
-    margin-top: 14px;
-    opacity: 1;
-  }
-  50% {
-    margin-top: 40px;
-    opacity: 1;
-  }
-  100% {
-    margin-top: 40px;
-    opacity: 0;
-  }
-} */
-
 .home__scroll {
   display: flex;
   justify-content: center;
@@ -590,7 +567,6 @@ img {
   pointer-events: none;
   width: 112%;
   background-color: var(--body-color);
-  /* color: var(--mainText); */
   color: var(--mainText);
   font-weight: 500;
   padding: 0.5rem 0rem;
@@ -706,11 +682,6 @@ img {
   object-fit: fill;
 }
 
-/* .card_skill:hover .imgBx {
-  width: 90%;
-  height: 90%;
-  transform: translate(-20%, -10%);
-} */
 .contentBx {
   display: flex;
   text-align: center;
@@ -757,31 +728,5 @@ img {
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background: linear-gradient(to right, aquamarine, mediumpurple);
-  animation: rotate 4s infinite, pulse 2s infinite;
-  filter: blur(200px);
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: translate(-50%, -50%) scale(0.8);
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.7);
-  }
-  50% {
-    transform: translate(-50%, -50%) scale(1.1);
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(0.8);
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0.7);
-  }
+  filter: blur(175px);
 }
