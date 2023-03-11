@@ -34,6 +34,7 @@
   --jetBrains-font: "JetBrains Mono", monospace;
   --major-font: "Major Mono Display", monospace;
   --raleway-font: "Raleway", sans-serif;
+  --montserrat-font: "Montserrat", sans-serif;
   --quicksand-font: "Quicksand", sans-serif;
   --source-code-font: "Source Code Pro", monospace;
   --gullible-font: "Maven Pro", monospace;
@@ -472,6 +473,50 @@ img {
   padding-bottom: 1rem;
 }
 
+.swing {
+  display: inline-block;
+  transform-origin: top center;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.swing-right {
+  animation-name: swingRight;
+  transform-origin: top right;
+  position: relative;
+  left: 0rem;
+  top: 0.5rem;
+}
+
+@keyframes swingRight {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+/* 
+.swing-right {
+  animation-name: swingRight;
+}
+
+@keyframes swingRight {
+  0% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+} */
+
 .Typewriter {
   margin-top: var(--mb-1);
   margin-bottom: var(--mb-2);
@@ -529,6 +574,7 @@ img {
   justify-self: center;
   margin-bottom: 4rem;
   z-index: 1;
+  border-radius: 50%;
 }
 
 .about__img {
@@ -611,6 +657,7 @@ img {
 
 /* .skills__container {
 } */
+
 .skills__container-card {
   position: relative;
   display: grid;
@@ -629,9 +676,9 @@ img {
 }
 .card_skill {
   position: relative;
-  width: 150px;
-  height: 200px;
-  border-radius: 15px;
+  width: 160px;
+  height: 210px;
+  border-radius: 1rem;
   overflow: hidden;
   margin: auto;
   padding: 2em;
@@ -649,7 +696,8 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--first-color-lighter);
+
+  background: linear-gradient(to right, aquamarine, mediumpurple);
   clip-path: circle(100px at 80% 20%);
   transition: 0.4s ease-in-out;
 }
@@ -664,7 +712,6 @@ img {
   position: absolute;
   top: 30%;
   left: -20%;
-  font-size: italic;
   color: var(--text-color);
 }
 
@@ -674,6 +721,38 @@ img {
   height: 100%;
   transition: 0.5s;
   transform: translate(-18%, 0%);
+  object-fit: fill;
+}
+.imgBx2 {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  transition: 0.5s;
+  transform: translate(-10%, 5%);
+  object-fit: fill;
+}
+.imgBx3 {
+  position: absolute;
+  width: 122%;
+  height: 100%;
+  transition: 0.5s;
+  transform: translate(-25%, 0%);
+  object-fit: fill;
+}
+.imgBx4 {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  transition: 0.5s;
+  transform: translate(-12%, 8%);
+  object-fit: fill;
+}
+.imgBx5 {
+  position: absolute;
+  width: 175%;
+  height: 100%;
+  transition: 0.5s;
+  transform: translate(-32%, -10%);
   object-fit: fill;
 }
 
@@ -694,17 +773,31 @@ img {
   position: relative;
   object-fit: cover;
   text-align: center;
-  transform: translate(-30%, 94%);
+  transform: translate(-31%, 97.5%);
   transition: 0.8s;
 }
 
 .card_skill .contentBx h2 {
   position: relative;
-  color: #320d3e;
-  font-family: var(--source-code-font);
-  font-weight: 600;
-  margin: 0;
-  padding: 0;
+  /* color: #320d3e; */
+  /* ? Ibiza Sunset */
+  /* background: linear-gradient(90deg, #ee0979, #ff6a00); */
+  /* ? Very blue */
+  background: linear-gradient(90deg, #021b79, #0575e6);
+  /* ? Red Blue */
+  /* background: linear-gradient(90deg, #c0392b, #8e44ad); */
+  /* ? Pacific Dream */
+  /* background: linear-gradient(90deg, #0f3443, #34e89e); */
+  /* background: linear-gradient(to right, #a770ef, #cf8bf3, #fdc5a5); */
+  /* ?Orangy */
+  /* background: linear-gradient(to right, #f857a6, #ff5858, #ffc53a); */
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: var(--raleway-font);
+  font-size: 24px;
+  font-weight: 100;
 }
 .shadow2 {
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
