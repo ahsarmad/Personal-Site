@@ -22,7 +22,7 @@ const setupParticles = () => {
     particlesJS("particles-js", {
       particles: {
         number: {
-          value: 28,
+          value: 25,
           density: {
             enable: true,
             value_area: 800,
