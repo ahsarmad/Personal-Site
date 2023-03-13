@@ -33,6 +33,11 @@
       rel="stylesheet"
     />
 
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <!-- Personal Styling  -->
     <link rel="stylesheet" href="css/styles.css" />
     <title>Sarmad A.</title>
@@ -680,7 +685,7 @@
                                 Academy of Engineering
                               </h3>
                               <p class="qualification__subtitle">
-                                A. Philip Randolph Campus High School
+                                A. Philip Randolph Campus
                               </p>
                             </div>
                             <div class="details">
@@ -832,7 +837,7 @@
                           <div class="task">
                             <div class="abstract">
                               <h3 class="qualification__title">
-                                Community Service
+                                Community Service / Tutor
                               </h3>
                               <p class="qualification__subtitle">
                                 Project Rousseau
@@ -842,10 +847,14 @@
                               <p
                                 class="qualification__subtitle qualification__details"
                               >
-                                Volunteered weekly at various soup kitchens,
+                                > Volunteered weekly at various soup kitchens,
                                 homeless shelters, and nursing homes as part of
                                 the organization's core approach to community
-                                service.
+                                service. <br />
+                                > Provided tutoring to incoming high school
+                                students in preparation for SHSAT's <br />
+                                > Provided tutoring to students in various STEM
+                                subjects.
                               </p>
                             </div>
                           </div>
@@ -933,7 +942,71 @@
         </div>
       </section>
       <!----------------------- Portfolio ----------------------->
-      <section class="portfolio section" id="portfolio"></section>
+      <section class="portfolio section" id="portfolio">
+        <h2 class="section__title">Portfolio</h2>
+        <span class="section__subtitle">Recent Works</span>
+
+        <div class="blog-slider">
+          <div class="blog-slider__wrp swiper-wrapper">
+            <!-- First portfolio item -->
+            <div class="blog-slider__item swiper-slide">
+              <div class="blog-slider__img">
+                <img src="assets/img/recipy.PNG" alt="" />
+              </div>
+              <div class="blog-slider__content">
+                <!-- <span class="blog-slider__code">December 2022</span> -->
+                <div class="blog-slider__title">ReciPy</div>
+                <div class="blog-slider__text">
+                  Mobile meal-generating app built using Python, Typescript,
+                  React Native, and AWS. The app offers tailored meal
+                  suggestions complete with comprehensive recipes, which are
+                  customized based on the user's preferences, dietary
+                  restrictions, and caloric boundaries. It includes barcode
+                  scanning to manage a user's pantry, expiration tracking, and
+                  push notifications to reduce food waste. The app also employs
+                  a recommender system based on K-means clustering to suggest
+                  meal options to users, and a social component managed through
+                  AWS to facilitate interaction and content sharing among users.
+                </div>
+              </div>
+            </div>
+            <div class="blog-slider__item swiper-slide">
+              <div class="blog-slider__img">
+                <img
+                  src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759871/jason-leung-798979-unsplash.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="blog-slider__content">
+                <span class="blog-slider__code">26 December 2019</span>
+                <div class="blog-slider__title">Lorem Ipsum Dolor2</div>
+                <div class="blog-slider__text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Recusandae voluptate repellendus magni illo ea animi?
+                </div>
+              </div>
+            </div>
+
+            <div class="blog-slider__item swiper-slide">
+              <div class="blog-slider__img">
+                <img
+                  src="https://res.cloudinary.com/muhammederdem/image/upload/v1535759871/alessandro-capuzzi-799180-unsplash.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="blog-slider__content">
+                <span class="blog-slider__code">26 December 2019</span>
+                <div class="blog-slider__title">Lorem Ipsum Dolor</div>
+                <div class="blog-slider__text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Recusandae voluptate repellendus magni illo ea animi?
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blog-slider__pagination"></div>
+        </div>
+      </section>
       <!----------------------- Contact Me ----------------------->
       <section class="contact section" id="contact"></section>
     </main>
@@ -975,6 +1048,9 @@
     <!-- Typewriter effect -->
 
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+    <!-- Swiper Js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <!-- Self Script -->
     <script src="js/script.js"></script>
