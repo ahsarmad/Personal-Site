@@ -291,6 +291,22 @@ document.body.onpointermove = (event) => {
       left: `${clientX}px`,
       top: `${clientY}px`,
     },
-    { duration: 3000, fill: "forwards" }
+    { duration: 3500, fill: "forwards" }
   );
 };
+
+// Swiper for portfolio
+
+var swiper = new Swiper(".blog-slider", {
+  spaceBetween: 30,
+  effect: "fade",
+  loop: true,
+  mousewheel: {
+    invert: false,
+  },
+  // autoHeight: true,
+  pagination: {
+    el: ".blog-slider__pagination",
+    clickable: true,
+  },
+});
