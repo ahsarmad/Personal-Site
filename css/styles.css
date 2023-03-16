@@ -1392,7 +1392,7 @@ form textarea {
   background-color: var(--first-color);
   opacity: 0.8;
   padding: 0 0.3rem;
-  border-radius: 0.4rem;
+  border-radius: 3rem;
   z-index: var(--z-tooltip);
   transition: 0.4s;
 }
