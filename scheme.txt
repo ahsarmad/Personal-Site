@@ -1,9 +1,0 @@
-header
-Main 
-    Home
-    About
-    Skills 
-    Education & Experience
-    Portfolio
-    Contact me
-footer

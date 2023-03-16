@@ -986,7 +986,7 @@
                   Full-stack employee and task management web application built
                   using Node, Express, React, Redux, PostgreSQL, and Sequelize.
                   With all CRUD operations integrated, it makes managing data a
-                  breeze. The app hosts an comprehensive array of features,
+                  breeze. The app hosts a comprehensive array of features,
                   including real-time error messages, many-to-many relationships
                   between models, handler functions for routing, Redux for state
                   management, and client-side routing with React-Router. The
@@ -1020,7 +1020,70 @@
         </div>
       </section>
       <!----------------------- Contact Me ----------------------->
-      <section class="contact section" id="contact"></section>
+      <section class="contact section" id="contact">
+        <h2 class="section__title">Contact Me</h2>
+
+        <div class="row mt-lg-6 justify-content-center contact_mail">
+          <!-- Contact Info -->
+          <div class="col-lg-6 mx-lg-0 mx-2 contact__container container">
+            <div class="contact__information">
+              <i class="uil uil-envelope contact__icon"></i>
+              <div>
+                <h3 class="contact__title">Email Me</h3>
+                <span class="contact__subtitle">afzalsarmad77@gmail.com</span>
+              </div>
+            </div>
+            <div class="contact__information">
+              <i class="uil uil-linkedin contact__icon"></i>
+              <div>
+                <h3 class="contact__title">Connect With Me</h3>
+                <span class="contact__subtitle linkedInLink">
+                  <a href="https://www.linkedin.com/in/sarmad7/" target = "_blank">https://www.linkedin.com/in/sarmad7/</a>
+                </span>
+              </div>
+            </div>
+            <div class="contact__information">
+              <i class="uil uil-location-point contact__icon"></i>
+              <div>
+                <h3 class="contact__title">Location</h3>
+                <span class="contact__subtitle"
+                  >New York City Metropolitan Area
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- Form -->
+
+          <div class="form-container col-lg-6 pl-lg-4 mt-lg-0 mt-6 contact-form id = "message-me">
+          <h2 class="contact__title">Interested in working together? -  <span>Lets Connect!</span></h2>
+          <form action = "https://formspree.io/f/xdovdjdg" method = "POST" class = "cf">
+
+            <div class="row">
+              <div class="col-lg-6">
+                <input type="text" name = "message-name" class = "form-control mb-30 cf" placeholder = "Your Name">
+              </div>
+              <div class="col-lg-6">
+                <input type="email" name = "message-email" class = "form-control mb-30 cf" placeholder = "Your Email">
+              </div>
+              <div class="col-12">
+                <input type="text" name = "message-subject" class = "form-control mb-30 cf" placeholder = "Subject">
+              </div>
+              <div class="col-12">
+                <textarea name = "message" class = "form-control mb-30 cf" cols = "30" rows = "10" placeholder = "Your Message"></textarea>
+              </div>
+              <div class="col-12">
+                <button type ="submit" class = "button button--flex send-message form_button">
+                  Send Message
+              <span>
+                <i class="uil uil-message button_icon"></i>
+              </span>
+                </button>
+              </div>
+          </form>
+          </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!----------------------- Footer ----------------------->
     <footer class="footer"></footer>
@@ -1034,7 +1097,6 @@
         max: 25, // Lower the tilt effect
         speed: 18000, // Slow down the tilt animation
         transition: true, // Add a transition when returning to default position
-        // easing: "cubic-bezier(.03,.98,.52,.99)",
         reset: false,
         gyroscope: true,
         reverse: true,
