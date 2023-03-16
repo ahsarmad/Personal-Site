@@ -310,3 +310,17 @@ var swiper = new Swiper(".blog-slider", {
     clickable: true,
   },
 });
+
+// Scroll Up
+
+function scrollUp() {
+  const scrollUp = document.getElementById("scroll-up");
+  if (this.scrollY >= 560) {
+    scrollUp.classList.add("show-scroll");
+  } else {
+    scrollUp.classList.remove("show-scroll");
+  }
+  console.log("scroll up functioning");
+}
+
+window.addEventListener("scroll", scrollUp);
