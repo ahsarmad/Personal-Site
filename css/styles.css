@@ -215,6 +215,7 @@ img {
   position: relative;
   display: inline-block;
   background-color: var(--first-color);
+  /* background: linear-gradient(to right, #ad1deb, #1fd1f9); */
   color: rgba(255, 255, 255, 1);
   padding: 1rem;
   border-radius: 0.8rem;
@@ -234,7 +235,7 @@ img {
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .button:hover {
-  background-color: #4559fa;
+  /* background-color: #4559fa; */
   color: #fff;
   padding-left: 0.8rem;
   padding-right: 2.5rem;
@@ -1321,8 +1322,11 @@ form textarea {
 /* ? ================== Footer Section ================== */
 
 .footer {
-  padding-top: var(--mb-2);
+  padding: 0;
   text-align: center;
+  border-top-right-radius: 2.5rem;
+  border-top-left-radius: 2.5rem;
+  overflow: hidden;
 }
 
 .footer__container {
@@ -1330,7 +1334,8 @@ form textarea {
 }
 
 .footer__bg {
-  background-color: var(--first-color);
+  background: linear-gradient(to right, #ad1deb, #1fd1f9);
+
   padding: 2rem 0 3rem;
 }
 
@@ -1348,13 +1353,17 @@ form textarea {
   display: flex;
   flex-direction: column;
   row-gap: 1.5rem;
-  justify-content: center;
+  margin-right: 2.5rem;
+}
+
+.footer__link {
   transition: ease-in-out 0.3s;
 }
 
 .footer__link:hover {
-  color: var(--first-color-lighter);
-  transform: scale(1.3);
+  /* color: var(--first-color-lighter); */
+  transform: scale(1.1);
+  /* color: #4559fa; */
 }
 
 .footer__socials {
@@ -1373,7 +1382,8 @@ form textarea {
 
 .footer__social:hover {
   transform: scale(1.3);
-  color: var(--first-color-lighter);
+  /* color: var(--first-color-lighter); */
+  color: #4559fa;
 }
 
 .footer__copy {
@@ -1387,7 +1397,8 @@ form textarea {
 .footer__subtitle,
 .footer__link,
 .footer__social {
-  color: #fff;
+  /* color: #fff; */
+  color: var(--body-color);
 }
 
 /* ? ================== SCroll Up Section ================== */
@@ -1471,7 +1482,6 @@ form textarea {
   .home__content {
     grid-template-columns: 0.25fr 3fr;
   }
-
   .qualification__data {
     gap: 0.5rem;
   }
@@ -1484,9 +1494,58 @@ form textarea {
   ::-webkit-scrollbar-thumb {
     background-color: var(--scroll-thumb-color);
   }
+  .portfolio {
+    padding-bottom: 0;
+  }
+
+  .contact {
+    padding-top: 0;
+  }
 }
 /*  Medium Screen */
-@media screen and (min-width: 568px) {
+@media screen and (max-width: 568px) {
+  .home__content {
+    grid-template-columns: max-content 1fr;
+  }
+
+  .home__data {
+    grid-column: initial;
+  }
+
+  #section {
+    min-height: 60vh;
+  }
+  .about__container,
+  .skill__container,
+  .portfolio__container,
+  .contact__container,
+  .footer__container {
+    grid-template-columns: repeat(1, 1fr);
+    padding-left: var(--mb-1);
+    padding-right: var(--mb-1);
+  }
+
+  /* .qualification__sections {
+    display: grid;
+    grid-template-columns: 0.85fr;
+    justify-content: center;
+  } */
+
+  .portfolio {
+    padding-bottom: 0;
+  }
+
+  .contact {
+    padding-top: 0;
+  }
+
+  .qualification__start-icon {
+    position: absolute;
+    transform: translateY(95%);
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 586px) {
 }
 
 /*  Large Screen */

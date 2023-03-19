@@ -56,7 +56,7 @@ const setupParticles = () => {
           random: true,
           anim: {
             enable: false,
-            speed: 30,
+            speed: 20,
             size_min: 0.1,
             sync: false,
           },
@@ -70,7 +70,7 @@ const setupParticles = () => {
         },
         move: {
           enable: true,
-          speed: 2,
+          speed: 1,
           direction: "none",
           random: false,
           straight: false,
