@@ -244,14 +244,14 @@ console.log("remove menu profile is working");
 new Typewriter("#typewriter", {
   strings: [
     "Full-Stack Developer",
-    "Mobile Application Engineer",
-    "Rock Climbing Enthusiast",
+    "Mobile App Engineer",
     "Scrum Practitioner",
     "Committed Team Player",
     "Problem Solver",
     "Cloud Architect",
-    "Classical Music Admirer",
     "Passionate Learner",
+    "Rock Climber",
+    "Classical Music Admirer",
     "Lover of Nature",
     "Tech Enthusiast",
     "Versatile Developer",
