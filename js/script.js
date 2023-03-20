@@ -56,7 +56,7 @@ const setupParticles = () => {
           random: true,
           anim: {
             enable: false,
-            speed: 30,
+            speed: 20,
             size_min: 0.1,
             sync: false,
           },
@@ -70,7 +70,7 @@ const setupParticles = () => {
         },
         move: {
           enable: true,
-          speed: 2,
+          speed: 1,
           direction: "none",
           random: false,
           straight: false,
@@ -244,14 +244,14 @@ console.log("remove menu profile is working");
 new Typewriter("#typewriter", {
   strings: [
     "Full-Stack Developer",
-    "Mobile Application Engineer",
-    "Rock Climbing Enthusiast",
+    "Mobile App Engineer",
     "Scrum Practitioner",
     "Committed Team Player",
     "Problem Solver",
     "Cloud Architect",
-    "Classical Music Admirer",
     "Passionate Learner",
+    "Rock Climber",
+    "Classical Music Admirer",
     "Lover of Nature",
     "Tech Enthusiast",
     "Versatile Developer",
@@ -324,3 +324,30 @@ function scrollUp() {
 }
 
 window.addEventListener("scroll", scrollUp);
+
+// Scroll Section Active highlight
+
+const sections = document.querySelectorAll("section[id]");
+
+function scrollActive() {
+  const scrollY = window.pageYOffset;
+
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    sectionId = current.getAttribute("id");
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(".nav_menu a[href*=" + sectionId + "]")
+        .classList.add("active-link");
+    } else {
+      document
+        .querySelector(".nav_menu a[href*=" + sectionId + "]")
+        .classList.remove("active-link");
+    }
+  });
+
+  console.log("Section highlight working!");
+}
+window.addEventListener("scroll", scrollActive);
