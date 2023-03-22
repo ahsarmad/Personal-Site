@@ -244,17 +244,16 @@ console.log("remove menu profile is working");
 new Typewriter("#typewriter", {
   strings: [
     "Full-Stack Developer",
-    "Mobile App Engineer",
+    "Mobile Application Engineer",
     "Scrum Practitioner",
     "Committed Team Player",
-    "Problem Solver",
+    "Creative Problem Solver",
     "Cloud Architect",
     "Passionate Learner",
     "Rock Climber",
     "Classical Music Admirer",
-    "Lover of Nature",
-    "Tech Enthusiast",
-    "Versatile Developer",
+    "Nature Enthusiast",
+    "Multifaceted Developer",
     "Hiker",
   ],
   autoStart: true,
@@ -351,3 +350,18 @@ function scrollActive() {
   console.log("Section highlight working!");
 }
 window.addEventListener("scroll", scrollActive);
+
+//
+
+const header = document.querySelector(".header");
+const threshold = 100;
+
+header.style.opacity = 0.85;
+
+window.addEventListener("scroll", function () {
+  if (window.scrollY > threshold) {
+    header.classList.add("header-scrolled");
+  } else {
+    header.classList.remove("header-scrolled");
+  }
+});
