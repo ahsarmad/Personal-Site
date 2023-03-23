@@ -254,7 +254,7 @@ new Typewriter("#typewriter", {
     "Classical Music Admirer",
     "Nature Enthusiast",
     "Multifaceted Developer",
-    "Hiker",
+    "Frequent Hiker",
   ],
   autoStart: true,
   loop: true,
@@ -319,7 +319,6 @@ function scrollUp() {
   } else {
     scrollUp.classList.remove("show-scroll");
   }
-  console.log("scroll up functioning");
 }
 
 window.addEventListener("scroll", scrollUp);
@@ -346,8 +345,6 @@ function scrollActive() {
         .classList.remove("active-link");
     }
   });
-
-  console.log("Section highlight working!");
 }
 window.addEventListener("scroll", scrollActive);
 
