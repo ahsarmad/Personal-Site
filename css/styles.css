@@ -1303,7 +1303,7 @@ img {
 }
 
 form {
-  max-width: 600px;
+  max-width: 800px;
   text-align: center;
   margin: 20 px auto;
 }
@@ -1899,9 +1899,9 @@ form textarea {
     justify-content: space-between;
   }
 
-  /* .about__buttons {
-    justify-content: initial;
-  } */
+  .about__buttons {
+    justify-content: center;
+  }
 
   .qualification__button {
     margin: 0 var(--mb-1);
@@ -1934,7 +1934,7 @@ form textarea {
   }
 }
 /*  Larger Screen */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .moon-change-theme {
     transition: ease-in-out 0.2s;
     margin-bottom: 0.6rem;
@@ -1966,7 +1966,15 @@ form textarea {
   .contact__inputs {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .contact__container {
+    padding-left: var(--mb-3);
+    padding-top: var(--mb-3);
+    row-gap: 4rem;
+  }
 }
+
+/* Largest Screens */
 
 @media screen and (min-width: 1150px) {
   .home__social {
