@@ -201,7 +201,6 @@ themeButton.addEventListener("click", () => {
   // Set particle options based on theme
   setupParticles();
 });
-console.log("Theme setting working properly");
 
 /* ======= Menu Shown/ Hidden ======= */
 
@@ -237,7 +236,6 @@ function linkAction() {
 }
 
 navLink.forEach((n) => n.addEventListener("click", linkAction));
-console.log("remove menu profile is working");
 
 // ======= Typewriter-effect ======
 
@@ -251,17 +249,12 @@ new Typewriter("#typewriter", {
     "Cloud Architect",
     "Passionate Learner",
     "Rock Climber",
-    "Classical Music Admirer",
-    "Nature Enthusiast",
     "Multifaceted Developer",
-    "Frequent Hiker",
   ],
   autoStart: true,
   loop: true,
   cursor: "|",
 });
-
-console.log("typewriter is working");
 
 // Customize particle color
 const particles = document.getElementsByClassName("particles-js-canvas-el")[0];
@@ -362,3 +355,20 @@ window.addEventListener("scroll", function () {
     header.classList.remove("header-scrolled");
   }
 });
+
+// fade in effect
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+    // else {
+    //   entry.target.classList.remove("show");
+    // }
+  });
+});
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));

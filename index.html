@@ -40,6 +40,13 @@
     />
     <!-- Personal Styling  -->
     <link rel="stylesheet" href="css/styles.css" />
+
+
+<!-- Scroll CSS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
     <title>Sarmad A.</title>
   </head>
   <body>
@@ -123,7 +130,7 @@
 
 
       <!----------------------- Home ----------------------->
-      <section class="home section" id="home">
+      <section class="home section" id="home" >
         <div class="home__container container grid">
           <div class="home__content grid">
             <div class="home__social">
@@ -144,14 +151,6 @@
                 <i class="uil uil-github-alt"></i>
               </a>
               <a
-                href="https://twitter.com/ahsarmad"
-                target="_blank"
-                class="home__social-icon"
-                id="myTwitter"
-              >
-                <i class="uil uil-twitter-alt"></i>
-              </a>
-              <a
                 href="https://medium.com/@afzalsarmad77"
                 target="_blank"
                 class="home__social-icon"
@@ -164,12 +163,12 @@
 
           <div class="home__data">
             <small class="home__welcome s-color"> Welcome to my website!</small>
-            <h1 class="home__title">
+            <h1 class="home__title" data-aos = "fade-up" data-aos-duration = "550">
               Hi I'm Sarmad and I'm
               <span class="swing swing-right">a</span>
             </h1>
-            <div id="typewriter" class="Typewriter"></div>
-            <h3 class="home__subtitle" id="home-bio">
+            <div id="typewriter" class="Typewriter" data-aos="fade-up" data-aos-duration="900"></div>
+            <h3 class="home__subtitle" id="home-bio" data-aos = "fade-up" data-aos-duration = "1100">
               Dedicated software engineer, deeply passionate about all facets of
               development and engineering. Committed to staying up-to-date with
               the latest trends and emerging technologies in rapidly-evolving
@@ -192,12 +191,12 @@
       </section>
       <!----------------------- About Me ----------------------->
       <section class="about section" id="about">
-        <h2 class="section__title">About Me</h2>
-        <span class="section__subtitle"> My Background </span>
+        <h2 class="section__title" data-aos = "fade-up" data-aos-duration="800">About Me</h2>
+        <span class="section__subtitle" data-aos = "fade-up" data-aos-duration="900"> My Background </span>
 
         <div class="about__container container grid">
-          <div class="about__img-caption">
-            <img src="assets/img/me8.JPG" alt="me" class="about__img" />
+          <div class="about__img-caption" >
+            <img src="assets/img/me8.JPG" alt="me" class="about__img" data-aos = "fade-up" data-aos-duration="950"/>
             <div class="about__caption-text">
               <span>
                 Hey there! Thanks for sticking around and taking the time to
@@ -206,8 +205,8 @@
             </div>
           </div>
 
-          <div class="about__data">
-            <p class="about__description" id="home-about">
+          <div class="about__data" data-aos = "fade-right" data-aos-duration="800" >
+            <p class="about__description" id="home-about" >
               From a young age, the boundless possibilities of technology have always captivated me. 
               My journey began with experimenting in C++ to create simple games as a teenager, 
               progressing to devising optimized path-finders using Dijkstra's and A* algorithms, 
@@ -220,25 +219,9 @@
               manifesting innovative concepts or refining existing systems, I eagerly embrace 
               new challenges and the excitement that comes with pushing the limits of what's technologically achievable.
             </p>
-            <!-- <p class="about__description" id="home-about">
-              Ever since I was young, I've always been fascinated by the
-              limitless potential of technology. From tinkering with C++ in my
-              early teenage years for creating a simple game, to constructing
-              optimized path-finders using Dijkstra's and A* algorithms, and
-              eventually building CRUD applications integrated with NLP models,
-              I'm grateful that my passion for technology has carried with me
-              throughout my life. I am proud to be able to call myself a
-              full-stack developer with years of experience in web and mobile
-              technologies as well as design. I'm passionate about my work and
-              take great pride in delivering high-quality results on time,
-              always striving to exceed expectations and bring new ideas to
-              life. Whether it's bringing innovative ideas to life or optimizing
-              existing systems, I'm always excited to tackle new challenges and
-              push the boundaries of what's technologically possible!
-            </p> -->
           </div>
 
-          <div class="about__info">
+          <div class="about__info" data-aos = "fade-down" data-aos-duration="800">
             <div>
               <span class="about__info-title">2+</span>
               <span class="about__info-name"
@@ -277,15 +260,15 @@
       </section>
       <!----------------------- Skills ----------------------->
       <section class="skills section" id="skills">
-        <h2 class="section__title">Technical Skillset</h2>
-        <span class="section__subtitle">
+        <h2 class="section__title" data-aos="fade-up" data-aos-duration="800">Technical Skillset</h2>
+        <span class="section__subtitle" data-aos="fade-up" data-aos-duration="900">
           Languages, Frameworks, and Tools I Hold Proficiency In
         </span>
 
         <div class="skills__container container grid">
           <div class="row" id="skillset_container">
             <!-- Skill 1 -->
-            <div class="skills__container-card">
+            <div class="skills__container-card hidden">
               <div class="card_skill shadow2">
                 <div class="imgBx">
                   <img
@@ -300,7 +283,7 @@
             </div>
 
             <!-- Skill 2 -->
-            <div class="skills__container-card">
+            <div class="skills__container-card hidden">
               <div class="card_skill shadow2">
                 <div class="imgBx2">
                   <img src="assets/img/css-3-seeklogo.com.svg" alt="css logo" />
@@ -312,7 +295,7 @@
             </div>
 
             <!-- Skill 3 -->
-            <div class="skills__container-card">
+            <div class="skills__container-card hidden">
               <div class="card_skill shadow2">
                 <div class="imgBx2">
                   <img
@@ -327,7 +310,7 @@
             </div>
 
             <!-- Skill 4 -->
-            <div class="skills__container-card">
+            <div class="skills__container-card hidden">
               <div class="card_skill shadow2">
                 <div class="imgBx2">
                   <img src="assets/img/typescript.svg" alt="ts logo" />
@@ -339,7 +322,7 @@
             </div>
 
             <!-- Skill 5 -->
-            <div class="skills__container-card">
+            <div class="skills__container-card hidden">
               <div class="card_skill shadow2">
                 <div class="imgBx2">
                   <img src="assets/img/python.svg" alt="py logo" />
@@ -351,7 +334,7 @@
             </div>
 
             <!-- Skill 6 -->
-            <div class="skills__container-card">
+            <div class="skills__container-card hidden">
               <div class="card_skill shadow2">
                 <div class="imgBx2">
                   <img src="assets/img/postgresql.svg" alt="psql logo" />
@@ -363,7 +346,7 @@
             </div>
 
             <!-- Skill 7 -->
-            <div class="skills__container-card">
+            <div class="skills__container-card hidden">
               <div class="card_skill shadow2">
                 <div class="imgBx2">
                   <img src="assets/img/react.svg" alt="react logo" />
@@ -375,7 +358,7 @@
             </div>
 
             <!-- Skill 8 -->
-            <div class="skills__container-card">
+            <div class="skills__container-card hidden">
               <div class="card_skill shadow2">
                 <div class="imgBx2">
                   <img src="assets/img/node-js.svg" alt="node logo" />
@@ -388,7 +371,7 @@
 
             <!-- Skill 9 -->
 
-            <div class="skills__container-card">
+            <div class="skills__container-card hidden">
               <div class="card_skill shadow2">
                 <div class="imgBx3">
                   <img
@@ -403,7 +386,7 @@
             </div>
 
             <!-- Skill 10 -->
-            <div class="skills__container-card">
+            <div class="skills__container-card hidden">
               <div class="card_skill shadow2">
                 <div class="imgBx4">
                   <img src="assets/img/django.svg" alt="django logo" />
@@ -414,7 +397,7 @@
               </div>
             </div>
             <!-- Skill 11 -->
-            <div class="skills__container-card">
+            <div class="skills__container-card hidden">
               <div class="card_skill shadow2">
                 <div class="imgBx2">
                   <img src="assets/img/flask.svg" alt="flask logo" />
@@ -425,7 +408,7 @@
               </div>
             </div>
             <!-- Skill 12 -->
-            <div class="skills__container-card">
+            <div class="skills__container-card hidden">
               <div class="card_skill shadow2">
                 <div class="imgBx2">
                   <img src="assets/img/git-2.svg" alt="git logo" />
@@ -436,7 +419,7 @@
               </div>
             </div>
             <!-- Skill 13 -->
-            <div class="skills__container-card">
+            <div class="skills__container-card hidden">
               <div class="card_skill shadow2">
                 <div class="imgBx2">
                   <img
@@ -450,7 +433,7 @@
               </div>
             </div>
             <!-- Skill 14 -->
-            <div class="skills__container-card">
+            <div class="skills__container-card hidden">
               <div class="card_skill shadow2">
                 <div class="imgBx2">
                   <img src="assets/img/amazon-aws.svg" alt="aws logo" />
@@ -461,7 +444,7 @@
               </div>
             </div>
             <!-- Skill 15 -->
-            <div class="skills__container-card">
+            <div class="skills__container-card hidden">
               <div class="card_skill shadow2">
                 <div class="imgBx2">
                   <img src="assets/img/mongodb.svg" alt="mongodb logo" />
@@ -472,7 +455,7 @@
               </div>
             </div>
             <!-- Skill 16 -->
-            <div class="skills__container-card">
+            <div class="skills__container-card hidden">
               <div class="card_skill shadow2">
                 <div class="imgBx">
                   <img src="assets/img/docker2.svg" alt="docker logo" />
@@ -483,7 +466,7 @@
               </div>
             </div>
             <!-- Skill 17 -->
-            <div class="skills__container-card">
+            <div class="skills__container-card hidden">
               <div class="card_skill shadow2">
                 <div class="imgBx2">
                   <img src="assets/img/figma2.svg" alt="figma logo" />
@@ -494,7 +477,7 @@
               </div>
             </div>
             <!-- Skill 18 -->
-            <div class="skills__container-card">
+            <div class="skills__container-card hidden">
               <div class="card_skill shadow2">
                 <div class="imgBx2">
                   <img src="assets/img/postman.svg" alt="postman logo" />
@@ -505,7 +488,7 @@
               </div>
             </div>
             <!-- Skill 19 -->
-            <div class="skills__container-card">
+            <div class="skills__container-card hidden">
               <div class="card_skill shadow2">
                 <div class="imgBx2">
                   <img src="assets/img/asana.svg" alt="asana logo" />
@@ -516,7 +499,7 @@
               </div>
             </div>
             <!-- Skill 20 -->
-            <div class="skills__container-card">
+            <div class="skills__container-card hidden">
               <div class="card_skill shadow2">
                 <div class="imgBx5">
                   <img
@@ -536,8 +519,8 @@
       </section>
       <!----------------------- Qualifications(Education & Experience) ----------------------->
       <section class="qualifications section" id="qualifications">
-        <h2 class="section__title">Qualifications</h2>
-        <span class="section__subtitle">My Academic and Professional Journey</span>
+        <h2 class="section__title" data-aos = "fade-up"data-aos-duration = "800">Qualifications</h2>
+        <span class="section__subtitle" data-aos="fade-up" data-aos-duration="900">My Academic and Professional Journey</span>
 
         <div class="qualification__container container">
           <div class="row mt-lg-0">
@@ -546,7 +529,7 @@
               class="col-lg-6 col-sm-10 col-md-10 mt-2 qualification__content"
               id="education"
             >
-              <div class="qualification__button button--flex">
+              <div class="qualification__button button--flex" data-aos="fade-down" data-aos-duration="900">
                 <i class="uil uil-graduation-cap qualification__icon"></i>
                 Education
               </div>
@@ -581,9 +564,9 @@
                       </div>
                     </div>
                     <!-- Timeline content events-->
-                    <div class="col py-2">
+                    <div class="col py-2" data-aos="fade-right" data-aos-duration="700">
                       <div class="card education-card mirror-face shadow2">
-                        <div class="card-body">
+                        <div class="card-body" >
                           <div class="task">
                             <div class="abstract">
                               <h3 class="qualification__title">
@@ -636,7 +619,7 @@
                       </div>
                     </div>
                     <!-- Timeline content events-->
-                    <div class="col py-2">
+                    <div class="col py-2" data-aos="fade-right" data-aos-duration="950">
                       <div class="card education-card mirror-face shadow2">
                         <div class="card-body">
                           <div class="task">
@@ -689,7 +672,7 @@
                       </div>
                     </div>
                     <!-- Timeline content events-->
-                    <div class="col py-2">
+                    <div class="col py-2" data-aos="fade-right" data-aos-duration="1050">
                       <div class="card education-card mirror-face shadow2">
                         <div class="card-body">
                           <div class="task">
@@ -742,7 +725,7 @@
               class="col-lg-6 col-sm-10 col-md-10 mt-2 qualification__content"
               id="experience"
             >
-              <div class="qualification__button button--flex">
+              <div class="qualification__button button--flex" data-aos="fade-down" data-aos-duration="900">
                 <i class="uil uil-briefcase-alt qualification__icon"></i>
                 Experience
               </div>
@@ -777,7 +760,7 @@
                       </div>
                     </div>
                     <!-- Timeline content events-->
-                    <div class="col py-2">
+                    <div class="col py-2"data-aos="fade-right" data-aos-duration="700">
                       <div class="card education-card mirror-face shadow2">
                         <div class="card-body">
                           <div class="task">
@@ -844,7 +827,7 @@
                       </div>
                     </div>
                     <!-- Timeline content events-->
-                    <div class="col py-2">
+                    <div class="col py-2" data-aos="fade-right" data-aos-duration="950">
                       <div class="card education-card mirror-face shadow2">
                         <div class="card-body">
                           <div class="task">
@@ -905,7 +888,7 @@
                       </div>
                     </div>
                     <!-- Timeline content events-->
-                    <div class="col py-2">
+                    <div class="col py-2" data-aos="fade-right" data-aos-duration="1050">
                       <div class="card education-card mirror-face shadow2">
                         <div class="card-body">
                           <div class="task">
@@ -956,10 +939,10 @@
       </section>
       <!----------------------- Portfolio ----------------------->
       <section class="portfolio section" id="portfolio">
-        <h2 class="section__title">Portfolio</h2>
-        <span class="section__subtitle">Recent Works</span>
+        <h2 class="section__title" data-aos="fade-up" data-aos-duration="800">Portfolio</h2>
+        <span class="section__subtitle" data-aos="fade-up" data-aos-duration="900">Recent Works</span>
 
-        <div class="blog-slider">
+        <div class="blog-slider" data-aos="fade-right" data-aos-duration="900">
           <div class="blog-slider__wrp swiper-wrapper">
             <!-- First portfolio item -->
             <div class="blog-slider__item swiper-slide">
@@ -1034,22 +1017,22 @@
       </section>
       <!----------------------- Contact Me ----------------------->
       <section class="contact section" id="contact">
-        <h2 class="section__title">Contact Me</h2>
-                <span class="section__subtitle">I'd Love to Hear From You!</span>
+        <h2 class="section__title" data-aos="fade-up" data-aos-duration="800">Contact Me</h2>
+          <span class="section__subtitle" data-aos="fade-up" data-aos-duration="900">I'd Love to Hear From You!</span>
 
         
 
         <div class="row mt-lg-6 justify-content-center contact_mail">
           <!-- Contact Info -->
           <div class="col-lg-6 mx-lg-0 mx-2 contact__container container">
-            <div class="contact__information">
+            <div class="contact__information" data-aos="fade-right" data-aos-duration="700">
               <i class="uil uil-envelope contact__icon"></i>
               <div>
                 <h3 class="contact__title">Email Me</h3>
                 <span class="contact__subtitle">afzalsarmad77@gmail.com</span>
               </div>
             </div>
-            <div class="contact__information">
+            <div class="contact__information"data-aos="fade-right" data-aos-duration="950">
               <i class="uil uil-linkedin contact__icon"></i>
               <div>
                 <h3 class="contact__title">Connect With Me</h3>
@@ -1058,7 +1041,7 @@
                 </span>
               </div>
             </div>
-            <div class="contact__information">
+            <div class="contact__information" data-aos="fade-right" data-aos-duration="1050">
               <i class="uil uil-location-point contact__icon"></i>
               <div>
                 <h3 class="contact__title">Location</h3>
@@ -1071,8 +1054,8 @@
           <!-- Form -->
 
           <div class="form-container col-lg-6 pl-lg-4 mt-lg-0 mt-6 contact-form id = "message-me">
-          <h2 class="contact__title">Interested in working together? -  <span>Lets Connect!</span></h2>
-          <form action = "https://formspree.io/f/xdovdjdg" method = "POST" class = "cf">
+          <h2 class="contact__title" data-aos="fade-right" data-aos-duration="800">Interested in working together? -  <span>Lets Connect!</span></h2>
+          <form action = "https://formspree.io/f/xdovdjdg" method = "POST" class = "cf" data-aos="fade-right" data-aos-duration="1050">
 
             <div class="row">
               <div class="col-lg-6">
@@ -1095,6 +1078,7 @@
               </span>
                 </button>
               </div>
+            </div>
           </form>
           </div>
           </div>
@@ -1143,14 +1127,6 @@
                 <i class="uil uil-github-alt"></i>
               </a>
               <a
-                href="https://twitter.com/ahsarmad"
-                target="_blank"
-                class="footer__social"
-                id="myTwitter"
-              >
-                <i class="uil uil-twitter-alt"></i>
-              </a>
-              <a
                 href="https://medium.com/@afzalsarmad77"
                 target="_blank"
                 class="footer__social"
@@ -1187,8 +1163,13 @@
     </script>
 
 
+<!-- Scroll -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
     <!-- Core -->
     <script src="js/core/jquery.min.js"></script>
     <script src="js/core/popper.min.js"></script>
