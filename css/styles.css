@@ -212,6 +212,7 @@ img {
   display: block;
   font-size: var(--small-font-size);
   margin-bottom: var(--mb-3);
+  color: var(--text-color-light);
 }
 
 .section__title,
@@ -268,7 +269,7 @@ img {
 .button:after {
   content: "";
   position: absolute;
-  width: 3.5rem;
+  width: 3rem;
   height: 100%;
   z-index: 1;
   background: rgba(255, 255, 255, 0.4);
@@ -593,17 +594,6 @@ img {
   padding-top: 1rem;
 }
 
-.about__img-caption {
-  display: flex;
-  align-items: center;
-  position: relative;
-  display: inline-flex;
-  justify-self: center;
-  margin-bottom: 4rem;
-  z-index: 1;
-  border-radius: 50%;
-}
-
 .about__img {
   width: 20rem;
   border-radius: 2rem;
@@ -613,6 +603,17 @@ img {
     0 100px 80px rgba(0, 0, 0, 0.12);
   transition: ease-in-out 0.4s;
   z-index: 1;
+}
+
+.about__img-caption {
+  display: flex;
+  align-items: center;
+  position: relative;
+  display: inline-flex;
+  justify-self: center;
+  margin-bottom: 4rem;
+  z-index: 1;
+  border-radius: 50%;
 }
 
 .about__img:hover {
@@ -656,6 +657,7 @@ img {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: var(--mb-2-5);
+  color: var(--text-color-light);
 }
 
 .about__info-title {
@@ -694,13 +696,13 @@ img {
   margin: auto;
   margin-bottom: var(--mb-2);
   z-index: 1;
-  transition: ease-in-out 0.2s;
+  /* transition: ease-in-out 0.2s; */
   border-radius: 70%;
 }
 
-.skills__container-card:hover {
+/* .skills__container-card:hover {
   transform: scale(1.1);
-}
+} */
 .card_skill {
   position: relative;
   width: 160px;
@@ -819,6 +821,61 @@ img {
     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
 }
+
+/* Transition delays for nth cards */
+
+.skills__container-card:nth-child(2) {
+  transition-delay: 200ms;
+}
+.skills__container-card:nth-child(3) {
+  transition-delay: 300ms;
+}
+.skills__container-card:nth-child(4) {
+  transition-delay: 400ms;
+}
+.skills__container-card:nth-child(5) {
+  transition-delay: 500ms;
+}
+
+.skills__container-card:nth-child(7) {
+  transition-delay: 200ms;
+}
+.skills__container-card:nth-child(8) {
+  transition-delay: 300ms;
+}
+.skills__container-card:nth-child(9) {
+  transition-delay: 400ms;
+}
+.skills__container-card:nth-child(10) {
+  transition-delay: 500ms;
+}
+
+.skills__container-card:nth-child(12) {
+  transition-delay: 200ms;
+}
+.skills__container-card:nth-child(13) {
+  transition-delay: 300ms;
+}
+.skills__container-card:nth-child(14) {
+  transition-delay: 400ms;
+}
+.skills__container-card:nth-child(15) {
+  transition-delay: 500ms;
+}
+
+.skills__container-card:nth-child(17) {
+  transition-delay: 200ms;
+}
+.skills__container-card:nth-child(18) {
+  transition-delay: 300ms;
+}
+.skills__container-card:nth-child(19) {
+  transition-delay: 400ms;
+}
+.skills__container-card:nth-child(20) {
+  transition-delay: 500ms;
+}
+
 /* ------ Blob ------ */
 
 #blob {
@@ -904,6 +961,7 @@ img {
 }
 
 .mirror-face {
+  border: 1px solid #fff;
   border-radius: 15px;
   font-size: 2rem;
   height: initial;
@@ -918,7 +976,7 @@ img {
   z-index: 1;
 }
 .abstract {
-  transition: 0.8s ease all;
+  transition: 1s ease all;
 }
 .details {
   max-height: 0;
@@ -1473,7 +1531,7 @@ form textarea {
   bottom: 5rem;
 }
 
-/* ? ================== SCroll Bar Section ================== */
+/* ? ================== Scroll Bar Section ================== */
 
 ::-webkit-scrollbar {
   width: 0.8rem;
@@ -1928,10 +1986,10 @@ form textarea {
     margin-top: 4.5rem;
   }
 
-  .header {
+  /* .header {
     border-bottom-left-radius: 0.8rem;
     border-bottom-right-radius: 0.8rem;
-  }
+  } */
 }
 /*  Larger Screen */
 @media screen and (min-width: 992px) {
@@ -1998,16 +2056,36 @@ form textarea {
 }
 @media screen and (min-width: 1600px) {
   .home__social {
-    transform: translateX(-13rem);
+    transform: translateX(-14rem);
   }
 }
 @media screen and (min-width: 1750px) {
   .home__social {
-    transform: translateX(-16rem);
+    transform: translateX(-18rem);
   }
 }
-/* @media screen and (min-width: 1850px) {
+@media screen and (min-width: 1800px) {
   .home__social {
-    transform: translateX(-20rem);
+    transform: translateX(-22rem);
   }
-} */
+}
+@media screen and (min-width: 1850px) {
+  .home__social {
+    transform: translateX(-24rem);
+  }
+}
+
+/* transitions for elements on page */
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
