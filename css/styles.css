@@ -790,6 +790,16 @@ img {
   transform: scale(0);
   transition: 1s;
 }
+.contentBx2 {
+  display: flex;
+  text-align: center;
+  position: relative;
+  width: 200%;
+  height: 0%;
+  transform: scale(0);
+  transition: 1s;
+  padding-left: 1rem;
+}
 
 .card_skill:hover .contentBx {
   display: flex;
@@ -799,6 +809,16 @@ img {
   object-fit: cover;
   text-align: center;
   transform: translate(-31%, 97.5%);
+  transition: 0.8s;
+}
+.card_skill:hover .contentBx2 {
+  display: flex;
+  height: 100%;
+  width: 200%;
+  position: relative;
+  object-fit: cover;
+  text-align: center;
+  transform: translate(-20%, 97.5%);
   transition: 0.8s;
 }
 
@@ -811,6 +831,17 @@ img {
   color: transparent;
   font-family: var(--raleway-font);
   font-size: 24px;
+  font-weight: 100;
+}
+.card_skill .contentBx2 h2 {
+  position: relative;
+  background: linear-gradient(90deg, #0575e6, #0575e6);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-family: var(--raleway-font);
+  font-size: 20px;
   font-weight: 100;
 }
 .shadow2 {
