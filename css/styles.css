@@ -459,34 +459,24 @@ img {
   transition: 1s;
   font-family: var(--body-font);
   pointer-events: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-.logo-header {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ffffff;
+.intro svg {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s ease-in-out forwards;
 }
 
-.logo {
-  position: relative;
-  display: inline-block;
-  bottom: -20px;
-  opacity: 0;
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
-.logo.active {
-  bottom: 0;
-  opacity: 1;
-  transition: ease-in-out 0.5s;
-}
-
-.logo.fade {
-  bottom: 150px;
-  opacity: 0;
-  transition: ease-in-out 0.5s;
-}
 /*? ================== Home ================== */
 
 .home {

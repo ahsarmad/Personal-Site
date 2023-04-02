@@ -390,29 +390,15 @@ images.forEach((image) => {
 
 // splash
 
-let intro = document.querySelector(".intro");
-let logo = document.querySelector(".logo-header");
-let logoSpan = document.querySelectorAll(".logo");
-
 window.addEventListener("DOMContentLoaded", () => {
+  // hide the scrollbar
+  document.body.style.overflow = "hidden";
+
   setTimeout(() => {
-    logoSpan.forEach((span, idx) => {
-      setTimeout(() => {
-        span.classList.add("active");
-      }, (idx + 1) * 400);
-    });
-
+    document.querySelector(".intro").style.top = "-100vh";
+    // show scrollbar after the splash screen is hidden
     setTimeout(() => {
-      logoSpan.forEach((span, idx) => {
-        setTimeout(() => {
-          span.classList.remove("active");
-          span.classList.add("fade");
-        }, (idx + 1) * 100);
-      });
-    }, 2000);
-
-    setTimeout(() => {
-      intro.style.top = "-100vh";
-    }, 2300);
-  });
+      document.body.style.overflow = "auto";
+    }, 1000);
+  }, 3300);
 });
