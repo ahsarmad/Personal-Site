@@ -388,4 +388,17 @@ images.forEach((image) => {
   observer.observe(image);
 });
 
-// loading
+// splash
+
+window.addEventListener("DOMContentLoaded", () => {
+  // hide the scrollbar
+  document.body.style.overflow = "hidden";
+
+  setTimeout(() => {
+    document.querySelector(".intro").style.top = "-100vh";
+    // show scrollbar after the splash screen is hidden
+    setTimeout(() => {
+      document.body.style.overflow = "auto";
+    }, 1000);
+  }, 3300);
+});
