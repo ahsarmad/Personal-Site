@@ -17,6 +17,7 @@
 
     <!-- Icons -->
 
+
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
@@ -56,11 +57,56 @@
 
  <!-- ? intro/ splash screen -->
 
-  <div class="intro">
+
+  <!-- <div class="intro">
     <svg viewBox="0 0 600 200">
       <text x="50%" y="50%" fill="none" stroke="white" stroke-width="2" font-size="48" text-anchor="middle">Sarmad Afzal</text>
     </svg>
-  </div>
+    <div id= "particles"></div>
+  </div> -->
+
+
+<div class="intro">
+  <svg class="text-container" viewBox="0 0 600 200">
+    <text class="name" x="50%" y="50%" fill="none" stroke="white" stroke-width="2" font-size="48" text-anchor="middle">
+      <tspan class="logo" id="first-name">Sarmad </tspan><tspan class="logo" id="last-name">Afzal</tspan>
+    </text>
+  </svg>
+  <div id="particles"></div>
+</div>
+
+  
+
+<!-- <div class="intro">
+  <svg viewBox="0 0 600 200">
+    <text x="50%" y="50%" fill="none" stroke="white" stroke-width="2" font-size="48" text-anchor="middle">Sarmad Afzal</text>
+  </svg>
+  <div id="particles"></div>
+</div> -->
+
+<!-- ? Circle motion -->
+<!-- <div class="intro">
+  <div class="intro-part intro-part-left"></div>
+  <div class="intro-part intro-part-right"></div>
+  <svg class="text-container" viewBox="0 0 600 200">
+    <text x="50%" y="50%" fill="none" stroke="white" stroke-width="2" font-size="48" text-anchor="middle">Sarmad Afzal</text>
+  </svg>
+  <div id="particles"></div>
+</div> -->
+
+
+<!-- Layered COlors effect -->
+<!-- <div class="intro">
+  <div class="intro-layer intro-layer-1"></div>
+  <div class="intro-layer intro-layer-2"></div>
+  <div class="intro-layer intro-layer-3"></div>
+  <svg class="text-container" viewBox="0 0 600 200">
+    <text x="50%" y="50%" fill="none" stroke="white" stroke-width="2" font-size="48" text-anchor="middle">Sarmad Afzal</text>
+  </svg>
+  <div id="particles"></div>
+</div> -->
+
+
 
     
     <!-- Particle effect -->
@@ -70,7 +116,7 @@
     <!----------------------- Header ----------------------->
     <header class="header" id="header">
       <nav class="nav container navbar-expand-lg hide-nav">
-        <a href="#" class="nav_logo navbar-brand ml-3">Sarmad A.</a>
+        <a href="#" class="nav_logo navbar-brand">Sarmad A.</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -176,12 +222,12 @@
 
           <div class="home__data">
             <small class="home__welcome s-color"> Welcome to my website!</small>
-            <h1 class="home__title" data-aos = "fade-up" data-aos-duration = "550">
+            <h1 class="home__title" data-aos="fade-up" data-aos-duration="550">
               Hi I'm Sarmad and I'm
               <span class="swing swing-right">a</span>
             </h1>
             <div id="typewriter" class="Typewriter" data-aos="fade-up" data-aos-duration="900"></div>
-            <h3 class="home__subtitle" id="home-bio" data-aos = "fade-up" data-aos-duration = "1100">
+            <h3 class="home__subtitle" id="home-bio" data-aos="fade-up" data-aos-duration="1100">
               Dedicated software engineer, deeply passionate about all facets of
               development and engineering. Committed to staying up-to-date with
               the latest trends and emerging technologies in rapidly-evolving
@@ -412,7 +458,6 @@
                   <img
                     data-src="assets/img/react-native-seeklogo.com.svg"
                     alt="react native"
-                    loading = "lazy"
                   />
                 </div>
                 <div class="contentBx">
@@ -1120,16 +1165,16 @@
 
             <div class="row">
               <div class="col-lg-6">
-                <input type="text" name = "message-name" class = "form-control mb-30 cf" placeholder = "Your Name">
+                <input type="text" name = "message-name" class = "form__color form-control mb-30 cf" placeholder = "Your Name">
               </div>
               <div class="col-lg-6">
-                <input type="email" name = "message-email" class = "form-control mb-30 cf" placeholder = "Your Email">
+                <input type="email" name = "message-email" class = "form__color form-control mb-30 cf" placeholder = "Your Email">
               </div>
               <div class="col-12">
-                <input type="text" name = "message-subject" class = "form-control mb-30 cf" placeholder = "Subject">
+                <input type="text" name = "message-subject" class = "form__color form-control mb-30 cf" placeholder = "Subject">
               </div>
               <div class="col-12">
-                <textarea name = "message" class = "form-control mb-30 cf" cols = "30" rows = "10" placeholder = "Your Message"></textarea>
+                <textarea name = "message" class = "form__color form-control mb-30 cf" cols = "30" rows = "10" placeholder = "Your Message"></textarea>
               </div>
               <div class="col-12">
                 <button type ="submit" class = "button button--flex send-message form_button">
@@ -1224,6 +1269,13 @@
     </script>
 
 
+<!-- three js -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+
 <!-- Scroll -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
@@ -1238,6 +1290,8 @@
 
     <!-- Argon JS -->
     <script src="js/argon-design-system.js"></script>
+
+
 
     
 <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>   
