@@ -26,6 +26,7 @@ const setupParticles = () => {
 
   // Check if the dark theme is active
   if (document.body.classList.contains(darkTheme)) {
+    particlesContainer.style.display = "block";
     // Initialize particles for the dark theme
     particlesJS("particles-js", {
       particles: {
@@ -132,6 +133,8 @@ const setupParticles = () => {
       },
       retina_detect: true,
     });
+  } else {
+    particlesContainer.style.display = "none";
   }
 };
 
