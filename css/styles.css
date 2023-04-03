@@ -329,7 +329,7 @@ img {
 }
 
 .nav {
-  max-width: 968px;
+  max-width: 1800px;
   height: var(--header-height);
   display: flex;
   align-items: center;
@@ -362,8 +362,14 @@ img {
   font-family: var(--quicksand-font);
   font-size: var(--h4-font-size);
   font-weight: var(--font-bold);
+  padding-left: 2rem;
 }
 
+@media screen and (max-width: 779px) {
+  .navbar-brand {
+    padding-left: 1rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .nav_menu {
     position: fixed;
