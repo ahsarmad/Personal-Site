@@ -363,36 +363,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// fade in effect // lazy loading
-
-// const images = document.querySelectorAll("img[data-src]");
-
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     console.log(entry);
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add("show");
-
-//       const img = entry.target;
-//       const src = img.getAttribute("data-src");
-//       img.setAttribute("src", src);
-//       img.removeAttribute("data-src");
-//       observer.unobserve(img);
-//     } else {
-//       entry.target.classList.remove("show");
-
-//       const img = entry.target;
-//       const dataSrc = img.getAttribute("data-src");
-//       img.setAttribute("src", "");
-//       img.setAttribute("data-src", dataSrc);
-//     }
-//   });
-// });
-
-// images.forEach((image) => {
-//   observer.observe(image);
-// });
-
 // splash
 
 // ? Opening vertically
