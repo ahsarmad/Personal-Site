@@ -18,6 +18,11 @@ const getCurrentIcon = () =>
 // Particle options (on dark theme)
 
 const setupParticles = () => {
+  // Clear any existing particles
+  const particlesCanvas = document.getElementById("particles-js-canvas-el");
+  if (particlesCanvas) {
+    particlesCanvas.remove();
+  }
   if (document.body.classList.contains(darkTheme)) {
     particlesJS("particles-js", {
       particles: {
