@@ -18,12 +18,15 @@ const getCurrentIcon = () =>
 // Particle options (on dark theme)
 
 const setupParticles = () => {
-  // Clear any existing particles
-  const particlesCanvas = document.getElementById("particles-js-canvas-el");
-  if (particlesCanvas) {
-    particlesCanvas.remove();
+  // Clear any existing particles and the canvas element
+  const particlesContainer = document.getElementById("particles-js");
+  while (particlesContainer.firstChild) {
+    particlesContainer.removeChild(particlesContainer.firstChild);
   }
+
+  // Check if the dark theme is active
   if (document.body.classList.contains(darkTheme)) {
+    // Initialize particles for the dark theme
     particlesJS("particles-js", {
       particles: {
         number: {
@@ -129,55 +132,10 @@ const setupParticles = () => {
       },
       retina_detect: true,
     });
-  } else {
-    particlesJS("particles-js", {
-      particles: {
-        number: {
-          value: 0,
-          density: {},
-        },
-        color: {},
-        shape: {
-          type: "circle",
-          stroke: {},
-          polygon: {},
-        },
-        opacity: {
-          anim: {},
-        },
-        size: {
-          anim: {},
-        },
-        line_linked: {},
-        move: {
-          attract: {},
-        },
-      },
-      interactivity: {
-        events: {
-          onhover: {
-            enable: false,
-          },
-          onclick: {
-            enable: false,
-          },
-        },
-        modes: {
-          grab: {
-            line_linked: {},
-          },
-          bubble: {},
-          repulse: {},
-          push: {},
-          remove: {},
-        },
-      },
-    });
   }
 };
 
-// Validate if user has previously chosen topic
-
+// Validate if user has previously chosen theme
 if (selectedTheme) {
   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
     darkTheme
@@ -190,7 +148,6 @@ if (selectedTheme) {
 }
 
 //Activate/ deactivate theme manually
-
 themeButton.addEventListener("click", () => {
   // Add or remove dark/light icon -- icon theme
   document.body.classList.toggle(darkTheme);
@@ -200,11 +157,7 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 
-  // re-cache canvas element
-  particlesCanvas = document.getElementById("particles-js-canvas-el");
-
-  // Set particle options based on theme
-  setupParticles();
+  setupParticles(); // Update the particles when switching themes
 });
 
 /* ======= Menu Shown/ Hidden ======= */
@@ -260,16 +213,6 @@ new Typewriter("#typewriter", {
   loop: true,
   cursor: "|",
 });
-
-// Customize particle color
-const particles = document.getElementsByClassName("particles-js-canvas-el")[0];
-particles.style.backgroundColor = "rgba(0, 0, 0, 0)";
-
-// Disable click event to add more particles
-particles.onclick = function (e) {
-  e.preventDefault();
-  e.stopPropagation();
-};
 
 // Blob
 
