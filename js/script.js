@@ -390,9 +390,42 @@ images.forEach((image) => {
 
 // splash
 
+// ? Opening vertically
+
 window.addEventListener("DOMContentLoaded", () => {
   // hide the scrollbar
   document.body.style.overflow = "hidden";
+
+  // Fade-in and slide-up animation for name
+  const firstName = document.getElementById("first-name");
+  const lastName = document.getElementById("last-name");
+
+  // Start showing names immediately after the page is loaded
+  setTimeout(() => {
+    firstName.classList.add("active");
+  }, 0);
+
+  setTimeout(() => {
+    lastName.classList.add("active");
+  }, 400);
+
+  // Fade-out and slide-up animation for name
+  setTimeout(() => {
+    firstName.classList.add("fade");
+  }, 4000);
+
+  setTimeout(() => {
+    lastName.classList.add("fade");
+  }, 4400);
+
+  // Slide up the splash screen after the fade-out and slide-up animations for the words are done
+  setTimeout(() => {
+    document.querySelector(".intro").style.top = "-100vh";
+    // show scrollbar after the splash screen is hidden
+    setTimeout(() => {
+      document.body.style.overflow = "auto";
+    }, 1000);
+  }, 5000);
 
   setTimeout(() => {
     document.querySelector(".intro").style.top = "-100vh";
@@ -400,5 +433,70 @@ window.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
       document.body.style.overflow = "auto";
     }, 1000);
-  }, 3300);
+  }, 4500);
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  // hide the scrollbar
+  document.body.style.overflow = "hidden";
+
+  // Three.js setup
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(
+    75,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    1000
+  );
+  const renderer = new THREE.WebGLRenderer({ alpha: true });
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.getElementById("particles").appendChild(renderer.domElement);
+
+  // Particle geometry and material
+  const geometry = new THREE.SphereGeometry(0.5, 32, 32);
+  const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
+
+  // Generate particles
+  const particles = [];
+  for (let i = 0; i < 600; i++) {
+    const particle = new THREE.Mesh(geometry, material);
+    particle.position.set(
+      Math.random() * window.innerWidth - window.innerWidth / 2,
+      Math.random() * window.innerHeight - window.innerHeight / 2,
+      -5
+    );
+    particle.velocity = new THREE.Vector3(
+      Math.random() * 2 - 1,
+      Math.random() * 2 - 1,
+      Math.random() * 2 - 1
+    );
+    scene.add(particle);
+    particles.push(particle);
+  }
+
+  camera.position.z = 5;
+
+  // Animation loop
+  const animate = () => {
+    requestAnimationFrame(animate);
+
+    particles.forEach((particle) => {
+      particle.position.add(particle.velocity);
+      particle.velocity.multiplyScalar(1.005);
+    });
+
+    renderer.render(scene, camera);
+  };
+
+  animate();
+
+  // Remove the intro div after 5 seconds
+  setTimeout(() => {
+    document.querySelector(".intro").style.opacity = "0";
+    // show scrollbar after the splash screen is hidden
+    setTimeout(() => {
+      document.body.style.overflow = "auto";
+      document.querySelector(".intro").style.display = "none";
+    }, 1000);
+  }, 5500);
 });
