@@ -73,6 +73,12 @@
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
+
+  /*  ======== Background  ========= */
+  --background-body-color: hsl(var(--hue-color), 66%, 99%);
+  --border-color: none;
+  --border-style: none;
+  --footer-color: var(--first-color);
 }
 
 /* FONT SIZE FOR LARGER DEVICES */
@@ -353,7 +359,9 @@ img {
 }
 
 .navbar-brand {
-  font-family: var(--robotoMono-font);
+  font-family: var(--quicksand-font);
+  font-size: var(--h4-font-size);
+  font-weight: var(--font-bold);
 }
 
 @media screen and (max-width: 768px) {
@@ -380,12 +388,14 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: var(--small-font-size);
+  /* font-size: var(--small-font-size); */
+  font-size: var(--h4-font-size);
   color: var(--title-color);
   font-weight: var(--font-medium);
   transition: ease-in-out 0.3s;
   z-index: 1;
   position: relative;
+  font-family: var(--quicksand-font);
 }
 
 .nav_link::before {
@@ -452,36 +462,34 @@ img {
 
 .logo {
   position: relative;
+  display: inline-block;
   bottom: -20px;
   opacity: 0;
-  transition: all 0.5s ease-in-out;
 }
 
 .logo.active {
   bottom: 0;
   opacity: 1;
-}
-
-.logo.fade {
-  bottom: 20px;
-  opacity: 0;
+  transition: ease-in-out 0.5s;
 }
 
 #first-name,
 #last-name {
   position: relative;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out, top 0.5s ease-in-out;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 #first-name.active,
 #last-name.active {
   opacity: 1;
+  transform: translateY(0);
 }
 
 #first-name.fade,
 #last-name.fade {
-  top: -20px;
+  transform: translateY(-40px);
   opacity: 0;
 }
 
@@ -492,16 +500,7 @@ img {
   top: 0;
   width: 100%;
   height: 100vh;
-  /* background-color: #161616; */
-
-  /* background: linear-gradient(45deg, #2c3e50, #222f3e); */
-  /* background: linear-gradient(45deg, #800080, #ffd700); */
   background: linear-gradient(45deg, aquamarine, mediumpurple);
-
-  /* background: linear-gradient(45deg, #6a11cb, #2575fc); */
-  /* ?Calm blue */
-  /* background: linear-gradient(45deg, #0093e9, #80d0c7); */
-
   transition: 1s;
   font-family: var(--body-font);
   pointer-events: auto;
@@ -530,291 +529,6 @@ img {
   width: 100%;
   height: 100%;
 }
-
-/* .intro {
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #161616;
-  transition: 1s;
-  font-family: var(--body-font);
-  pointer-events: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.intro svg {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dash 5s ease-in-out forwards;
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-
-/* ? Opening horizontally */
-/* .intro {
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: transparent;
-  transition: 1s;
-  font-family: var(--body-font);
-  pointer-events: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.intro-part {
-  position: absolute;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  background-color: #161616;
-  transition: 1s;
-  z-index: 0;
-}
-
-.intro-part-left {
-  left: 0;
-}
-
-.intro-part-right {
-  right: 0;
-}
-
-
-.text-container {
-  position: absolute;
-  z-index: 2;
-}
-
-.intro svg text {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dash 5s ease-in-out forwards;
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-#particles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-} */
-
-/* ? Opening in circular motion */
-/* .intro {
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: transparent;
-  transition: 1s;
-  font-family: var(--body-font);
-  pointer-events: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  clip-path: circle(100% at 50% 50%);
-}
-
-.intro-part {
-  position: absolute;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  background-color: #161616;
-  z-index: 0;
-}
-
-.intro-part-left {
-  left: 0;
-}
-
-.intro-part-right {
-  right: 0;
-}
-
-.text-container {
-  position: absolute;
-  z-index: 2;
-}
-
-.intro svg text {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dash 5s ease-in-out forwards;
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-#particles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-} */
-
-/* ? Horizontal cut and fading */
-
-/* .intro {
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: transparent;
-  transition: opacity 2s ease;
-  font-family: var(--body-font);
-  pointer-events: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.intro-part {
-  position: absolute;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  background-color: #161616;
-  transition: transform 2s ease;
-  z-index: 0;
-}
-
-.intro-part-left {
-  left: 0;
-}
-
-.intro-part-right {
-  right: 0;
-}
-
-.text-container {
-  position: absolute;
-  z-index: 2;
-  opacity: 1;
-  transition: opacity 2s ease;
-}
-
-.intro svg text {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  animation: dash 5s ease-in-out forwards;
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-#particles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-} */
-
-/* ? Layered Colors effect */
-
-/* .intro {
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: transparent;
-  font-family: var(--body-font);
-  pointer-events: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: visible;
-  opacity: 1;
-  transition: opacity 1s ease;
-}
-
-.intro-layer {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: transform 1s ease;
-}
-
-.intro-layer-1 {
-  background-color: #161616;
-  z-index: 3;
-}
-
-.intro-layer-2 {
-  background-color: #3c3c3c;
-  z-index: 2;
-}
-
-.intro-layer-3 {
-  background-color: #808080;
-  z-index: 1;
-}
-
-.text-container {
-  position: absolute;
-  z-index: 4;
-}
-
-.intro svg text {
-  stroke-dasharray: 550;
-  stroke-dashoffset: 550;
-  animation: dash 5s ease-in-out forwards;
-}
-
-@keyframes dash {
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-#particles {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-} */
 
 /*? ================== Home ================== */
 
@@ -1299,6 +1013,11 @@ img {
   color: transparent;
 }
 
+.transparent_card {
+  background-color: var(--background-body-color);
+  border-color: var(--border-color);
+}
+
 .card-body {
   background-color: var(--body-color);
 }
@@ -1781,6 +1500,10 @@ form #input-submit:hover {
 
 form textarea {
   height: 130px;
+}
+
+.form__color {
+  background-color: var(--body-color);
 }
 
 .cf:before,

@@ -400,7 +400,6 @@ window.addEventListener("DOMContentLoaded", () => {
   const firstName = document.getElementById("first-name");
   const lastName = document.getElementById("last-name");
 
-  // Start showing names immediately after the page is loaded
   setTimeout(() => {
     firstName.classList.add("active");
   }, 0);
@@ -420,20 +419,15 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Slide up the splash screen after the fade-out and slide-up animations for the words are done
   setTimeout(() => {
-    document.querySelector(".intro").style.top = "-100vh";
+    const intro = document.querySelector(".intro");
+    intro.style.top = "-100vh";
+
     // show scrollbar after the splash screen is hidden
     setTimeout(() => {
       document.body.style.overflow = "auto";
+      intro.style.display = "none";
     }, 1000);
   }, 5000);
-
-  setTimeout(() => {
-    document.querySelector(".intro").style.top = "-100vh";
-    // show scrollbar after the splash screen is hidden
-    setTimeout(() => {
-      document.body.style.overflow = "auto";
-    }, 1000);
-  }, 4500);
 });
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -489,14 +483,4 @@ window.addEventListener("DOMContentLoaded", () => {
   };
 
   animate();
-
-  // Remove the intro div after 5 seconds
-  setTimeout(() => {
-    document.querySelector(".intro").style.opacity = "0";
-    // show scrollbar after the splash screen is hidden
-    setTimeout(() => {
-      document.body.style.overflow = "auto";
-      document.querySelector(".intro").style.display = "none";
-    }, 1000);
-  }, 5500);
 });
