@@ -1,0 +1,7 @@
+[[plugins]]
+package = "@netlify/plugin-gzip"
+
+  [plugins.inputs]
+  extensions = "css,html,js,json,svg"
+  exclude = "vendor/**/*"
+  hook_id = "https://api.netlify.com/build_hooks/642ad2c236db80145de411a6"
