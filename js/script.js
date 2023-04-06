@@ -69,7 +69,13 @@ function linkAction() {
   navMenu.classList.remove("show-menu");
 }
 
-navLink.forEach((n) => n.addEventListener("click", linkAction));
+// navLink.forEach((n) => n.addEventListener("click", linkAction));
+
+document.getElementById("nav-menu").addEventListener("click", function (event) {
+  if (event.target.classList.contains("nav_link")) {
+    linkAction();
+  }
+});
 
 // ======= Typewriter-effect ======
 
@@ -277,4 +283,22 @@ window.addEventListener("DOMContentLoaded", () => {
   };
 
   animate();
+});
+
+// Scrolling For CSS
+
+document.addEventListener("DOMContentLoaded", function () {
+  const fadeInElements = document.querySelectorAll(".fade-in");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in-visible");
+      }
+    });
+  });
+
+  fadeInElements.forEach((element) => {
+    observer.observe(element);
+  });
 });
