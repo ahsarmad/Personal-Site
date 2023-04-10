@@ -2164,3 +2164,9 @@ form textarea {
     transform: translateX(-24rem);
   }
 }
+
+@media screen and (min-height: 300px) and (max-height: 800px) {
+  .about {
+    padding-top: 25rem;
+  }
+}
