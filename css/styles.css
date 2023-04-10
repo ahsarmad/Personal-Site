@@ -2165,8 +2165,13 @@ form textarea {
   }
 }
 
-@media screen and (min-height: 300px) and (max-height: 800px) {
+@media screen and (min-height: 600px) and (max-height: 800px) {
   .about {
-    padding-top: 25rem;
+    padding-top: 5rem;
+  }
+}
+@media screen and (min-height: 300px) and (max-height: 670px) {
+  .about {
+    padding-top: 9rem;
   }
 }
