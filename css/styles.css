@@ -2167,11 +2167,11 @@ form textarea {
 
 @media screen and (min-height: 600px) and (max-height: 800px) {
   .about {
-    padding-top: 5rem;
+    padding-top: 8rem;
   }
 }
 @media screen and (min-height: 300px) and (max-height: 670px) {
   .about {
-    padding-top: 9rem;
+    padding-top: 11rem;
   }
 }
